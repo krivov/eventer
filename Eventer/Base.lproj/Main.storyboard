@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pav-bu-YBW">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Eventer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="UrK-kL-Qke"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="lL7-Oh-u9S" id="YN1-rQ-6qi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="lL7-Oh-u9S">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="x0E-OM-7Ad"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="d7B-kD-dpH"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="Zvk-S5-VOg"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="CJC-SI-afB"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="974" y="215"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="8qs-Qt-vdM">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="pav-bu-YBW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="KqI-2c-0Te">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="V1l-dc-5pu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xcP-W2-3cq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="375" y="314"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="OyW-SI-A5y">
+            <objects>
+                <viewController id="8YS-96-75O" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Smk-Dn-1OA"/>
+                        <viewControllerLayoutGuide type="bottom" id="gf6-GU-8YO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wMx-AB-a4f">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favorites" id="bR2-Ml-pZZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VOV-e7-doc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1250" y="1365"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="hDW-vd-7Xc">
+            <objects>
+                <viewController id="cvK-93-uRw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8r3-hF-V8P"/>
+                        <viewControllerLayoutGuide type="bottom" id="4CI-7L-hRy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SYv-yn-QoT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" id="F3Y-nL-1VI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qsL-9K-9c0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1250" y="704"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ewb-L4-dWm">
+            <objects>
+                <tabBarController id="i3K-v2-sp1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="uRc-TR-cSy"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="vzF-7d-rdN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="cvK-93-uRw" kind="relationship" relationship="viewControllers" id="p7F-15-K2t"/>
+                        <segue destination="8YS-96-75O" kind="relationship" relationship="viewControllers" id="08r-iP-TuQ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jd2-ni-ljY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="479" y="983"/>
+        </scene>
+    </scenes>
+</document>
