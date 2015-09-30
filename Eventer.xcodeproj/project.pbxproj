@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		484D039B1BBC7D64007A9CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D039A1BBC7D64007A9CCC /* AppDelegate.swift */; };
-		484D039D1BBC7D64007A9CCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D039C1BBC7D64007A9CCC /* ViewController.swift */; };
+		484D039D1BBC7D64007A9CCC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D039C1BBC7D64007A9CCC /* SearchViewController.swift */; };
 		484D03A01BBC7D64007A9CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484D039E1BBC7D64007A9CCC /* Main.storyboard */; };
 		484D03A31BBC7D64007A9CCC /* Eventer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 484D03A11BBC7D64007A9CCC /* Eventer.xcdatamodeld */; };
 		484D03A51BBC7D64007A9CCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 484D03A41BBC7D64007A9CCC /* Assets.xcassets */; };
 		484D03A81BBC7D64007A9CCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484D03A61BBC7D64007A9CCC /* LaunchScreen.storyboard */; };
 		484D03B31BBC7D64007A9CCC /* EventerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03B21BBC7D64007A9CCC /* EventerTests.swift */; };
 		484D03BE1BBC7D64007A9CCC /* EventerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03BD1BBC7D64007A9CCC /* EventerUITests.swift */; };
+		484D03CF1BBC88CA007A9CCC /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03CE1BBC88CA007A9CCC /* FavoritesViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		484D03D11BBC8902007A9CCC /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03D01BBC8902007A9CCC /* SearchResultsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		484D03D31BBC8919007A9CCC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03D21BBC8919007A9CCC /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		484D03D51BBC8E41007A9CCC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03D41BBC8E41007A9CCC /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +41,7 @@
 /* Begin PBXFileReference section */
 		484D03971BBC7D64007A9CCC /* Eventer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		484D039A1BBC7D64007A9CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		484D039C1BBC7D64007A9CCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		484D039C1BBC7D64007A9CCC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		484D039F1BBC7D64007A9CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		484D03A21BBC7D64007A9CCC /* Eventer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Eventer.xcdatamodel; sourceTree = "<group>"; };
 		484D03A41BBC7D64007A9CCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +53,10 @@
 		484D03B91BBC7D64007A9CCC /* EventerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		484D03BD1BBC7D64007A9CCC /* EventerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventerUITests.swift; sourceTree = "<group>"; };
 		484D03BF1BBC7D64007A9CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		484D03CE1BBC88CA007A9CCC /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoritesViewController.swift; path = controllers/FavoritesViewController.swift; sourceTree = "<group>"; };
+		484D03D01BBC8902007A9CCC /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResultsViewController.swift; path = controllers/SearchResultsViewController.swift; sourceTree = "<group>"; };
+		484D03D21BBC8919007A9CCC /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = controllers/MapViewController.swift; sourceTree = "<group>"; };
+		484D03D41BBC8E41007A9CCC /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = controllers/DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +146,11 @@
 		484D03CC1BBC7E56007A9CCC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				484D039C1BBC7D64007A9CCC /* ViewController.swift */,
+				484D039C1BBC7D64007A9CCC /* SearchViewController.swift */,
+				484D03CE1BBC88CA007A9CCC /* FavoritesViewController.swift */,
+				484D03D01BBC8902007A9CCC /* SearchResultsViewController.swift */,
+				484D03D21BBC8919007A9CCC /* MapViewController.swift */,
+				484D03D41BBC8E41007A9CCC /* DetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -282,9 +294,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				484D039D1BBC7D64007A9CCC /* ViewController.swift in Sources */,
+				484D039D1BBC7D64007A9CCC /* SearchViewController.swift in Sources */,
+				484D03D31BBC8919007A9CCC /* MapViewController.swift in Sources */,
 				484D03A31BBC7D64007A9CCC /* Eventer.xcdatamodeld in Sources */,
+				484D03CF1BBC88CA007A9CCC /* FavoritesViewController.swift in Sources */,
 				484D039B1BBC7D64007A9CCC /* AppDelegate.swift in Sources */,
+				484D03D11BBC8902007A9CCC /* SearchResultsViewController.swift in Sources */,
+				484D03D51BBC8E41007A9CCC /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
