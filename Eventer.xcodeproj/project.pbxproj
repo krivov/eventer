@@ -19,6 +19,10 @@
 		484D03D11BBC8902007A9CCC /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03D01BBC8902007A9CCC /* SearchResultsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		484D03D31BBC8919007A9CCC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03D21BBC8919007A9CCC /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		484D03D51BBC8E41007A9CCC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03D41BBC8E41007A9CCC /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		484D03DA1BBDDB9C007A9CCC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484D03D71BBDDB9C007A9CCC /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
+		484D03DB1BBDDB9C007A9CCC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484D03D81BBDDB9C007A9CCC /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
+		484D03DC1BBDDB9C007A9CCC /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484D03D91BBDDB9C007A9CCC /* FBSDKShareKit.framework */; settings = {ASSET_TAGS = (); }; };
+		484D03E01BBDE382007A9CCC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03DF1BBDE382007A9CCC /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,11 @@
 		484D03D01BBC8902007A9CCC /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResultsViewController.swift; path = controllers/SearchResultsViewController.swift; sourceTree = "<group>"; };
 		484D03D21BBC8919007A9CCC /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = controllers/MapViewController.swift; sourceTree = "<group>"; };
 		484D03D41BBC8E41007A9CCC /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = controllers/DetailViewController.swift; sourceTree = "<group>"; };
+		484D03D71BBDDB9C007A9CCC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		484D03D81BBDDB9C007A9CCC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		484D03D91BBDDB9C007A9CCC /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		484D03DE1BBDDDD5007A9CCC /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "supporting/Bridging-Header.h"; sourceTree = "<group>"; };
+		484D03DF1BBDE382007A9CCC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = controllers/LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +73,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				484D03DB1BBDDB9C007A9CCC /* FBSDKLoginKit.framework in Frameworks */,
+				484D03DA1BBDDB9C007A9CCC /* FBSDKCoreKit.framework in Frameworks */,
+				484D03DC1BBDDB9C007A9CCC /* FBSDKShareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +103,7 @@
 				484D03B11BBC7D64007A9CCC /* EventerTests */,
 				484D03BC1BBC7D64007A9CCC /* EventerUITests */,
 				484D03981BBC7D64007A9CCC /* Products */,
+				484D03D61BBDDA80007A9CCC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,9 +123,8 @@
 				484D03CD1BBC7E60007A9CCC /* Views */,
 				484D03CC1BBC7E56007A9CCC /* Controllers */,
 				484D03CB1BBC7E4C007A9CCC /* Models */,
-				484D039A1BBC7D64007A9CCC /* AppDelegate.swift */,
+				484D03DD1BBDDD79007A9CCC /* Supporting files */,
 				484D03A41BBC7D64007A9CCC /* Assets.xcassets */,
-				484D03A91BBC7D64007A9CCC /* Info.plist */,
 				484D03A11BBC7D64007A9CCC /* Eventer.xcdatamodeld */,
 			);
 			path = Eventer;
@@ -151,6 +163,7 @@
 				484D03D01BBC8902007A9CCC /* SearchResultsViewController.swift */,
 				484D03D21BBC8919007A9CCC /* MapViewController.swift */,
 				484D03D41BBC8E41007A9CCC /* DetailViewController.swift */,
+				484D03DF1BBDE382007A9CCC /* LoginViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -162,6 +175,26 @@
 				484D039E1BBC7D64007A9CCC /* Main.storyboard */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		484D03D61BBDDA80007A9CCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				484D03D71BBDDB9C007A9CCC /* FBSDKCoreKit.framework */,
+				484D03D81BBDDB9C007A9CCC /* FBSDKLoginKit.framework */,
+				484D03D91BBDDB9C007A9CCC /* FBSDKShareKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		484D03DD1BBDDD79007A9CCC /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				484D039A1BBC7D64007A9CCC /* AppDelegate.swift */,
+				484D03A91BBC7D64007A9CCC /* Info.plist */,
+				484D03DE1BBDDDD5007A9CCC /* Bridging-Header.h */,
+			);
+			name = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +331,7 @@
 				484D03D31BBC8919007A9CCC /* MapViewController.swift in Sources */,
 				484D03A31BBC7D64007A9CCC /* Eventer.xcdatamodeld in Sources */,
 				484D03CF1BBC88CA007A9CCC /* FavoritesViewController.swift in Sources */,
+				484D03E01BBDE382007A9CCC /* LoginViewController.swift in Sources */,
 				484D039B1BBC7D64007A9CCC /* AppDelegate.swift in Sources */,
 				484D03D11BBC8902007A9CCC /* SearchResultsViewController.swift in Sources */,
 				484D03D51BBC8E41007A9CCC /* DetailViewController.swift in Sources */,
@@ -442,10 +476,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Eventer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = biz.krivov.Eventer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Eventer/supporting/Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -453,10 +493,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Eventer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = biz.krivov.Eventer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Eventer/supporting/Bridging-Header.h";
 			};
 			name = Release;
 		};
