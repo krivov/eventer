@@ -17,9 +17,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        // Override point for customization after application launch.
-        //return true
+        //for the proper use of the Facebook SDK
+        let fbAppLauch = FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        //set controller identifier if we dont login or login
+        var controllerIdentifier = "loginController"
+        if ((FBSDKAccessToken.currentAccessToken()) != nil) {
+            controllerIdentifier = "searchTabBar"
+        }
+        
+        //set root view controller
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let initVC = storyboard.instantiateViewControllerWithIdentifier(controllerIdentifier)
+        
+        self.window?.rootViewController = initVC
+        
+        return fbAppLauch
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {

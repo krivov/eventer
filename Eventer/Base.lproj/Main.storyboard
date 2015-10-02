@@ -211,7 +211,7 @@
         <!--Login View Controller-->
         <scene sceneID="V3V-zh-BwH">
             <objects>
-                <viewController id="Oa4-4Z-5Jo" customClass="LoginViewController" customModule="Eventer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginController" id="Oa4-4Z-5Jo" customClass="LoginViewController" customModule="Eventer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3kp-Hx-78A"/>
                         <viewControllerLayoutGuide type="bottom" id="xdI-ZW-AJR"/>
@@ -260,7 +260,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ewb-L4-dWm">
             <objects>
-                <tabBarController id="i3K-v2-sp1" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="searchTabBar" id="i3K-v2-sp1" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="uRc-TR-cSy"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="vzF-7d-rdN">
