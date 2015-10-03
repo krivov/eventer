@@ -194,15 +194,24 @@
                                 <rect key="frame" x="136" y="199" width="48" height="30"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
-                                    <segue destination="x51-tY-7OG" kind="show" id="PNW-no-o05"/>
+                                    <action selector="touchSearchButton:" destination="cvK-93-uRw" eventType="touchUpInside" id="iw6-cw-wtZ"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="HBx-st-vhA">
+                                <rect key="frame" x="150" y="204" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" id="wjZ-kf-Sdn"/>
                     <navigationItem key="navigationItem" id="XDk-AO-3fk"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="HBx-st-vhA" id="80d-zW-eaa"/>
+                        <outlet property="searchButton" destination="fqd-pF-M4e" id="4nx-sS-PeD"/>
+                        <outlet property="searchField" destination="nbE-dl-LgR" id="K8C-TM-sbe"/>
+                        <segue destination="x51-tY-7OG" kind="show" identifier="showResultsSeque" id="fF2-PB-2Xc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qsL-9K-9c0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
