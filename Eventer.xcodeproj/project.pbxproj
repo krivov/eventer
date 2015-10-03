@@ -23,6 +23,11 @@
 		484D03DB1BBDDB9C007A9CCC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484D03D81BBDDB9C007A9CCC /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
 		484D03DC1BBDDB9C007A9CCC /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484D03D91BBDDB9C007A9CCC /* FBSDKShareKit.framework */; settings = {ASSET_TAGS = (); }; };
 		484D03E01BBDE382007A9CCC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03DF1BBDE382007A9CCC /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		484D03E21BBFB466007A9CCC /* FacebookConvenient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03E11BBFB466007A9CCC /* FacebookConvenient.swift */; settings = {ASSET_TAGS = (); }; };
+		484D03E41BBFB47A007A9CCC /* FacebookClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03E31BBFB47A007A9CCC /* FacebookClient.swift */; settings = {ASSET_TAGS = (); }; };
+		484D03E61BBFB4F3007A9CCC /* FacebookConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03E51BBFB4F3007A9CCC /* FacebookConstants.swift */; settings = {ASSET_TAGS = (); }; };
+		484D03E81BBFB51C007A9CCC /* FacebookEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03E71BBFB51C007A9CCC /* FacebookEvent.swift */; settings = {ASSET_TAGS = (); }; };
+		484D03EA1BBFBF33007A9CCC /* CoreDataStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03E91BBFBF33007A9CCC /* CoreDataStackManager.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +71,11 @@
 		484D03D91BBDDB9C007A9CCC /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		484D03DE1BBDDDD5007A9CCC /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "supporting/Bridging-Header.h"; sourceTree = "<group>"; };
 		484D03DF1BBDE382007A9CCC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		484D03E11BBFB466007A9CCC /* FacebookConvenient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookConvenient.swift; path = models/FacebookConvenient.swift; sourceTree = "<group>"; };
+		484D03E31BBFB47A007A9CCC /* FacebookClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookClient.swift; path = models/FacebookClient.swift; sourceTree = "<group>"; };
+		484D03E51BBFB4F3007A9CCC /* FacebookConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookConstants.swift; path = models/FacebookConstants.swift; sourceTree = "<group>"; };
+		484D03E71BBFB51C007A9CCC /* FacebookEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookEvent.swift; path = models/FacebookEvent.swift; sourceTree = "<group>"; };
+		484D03E91BBFBF33007A9CCC /* CoreDataStackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStackManager.swift; path = supporting/CoreDataStackManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +161,10 @@
 		484D03CB1BBC7E4C007A9CCC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				484D03E11BBFB466007A9CCC /* FacebookConvenient.swift */,
+				484D03E31BBFB47A007A9CCC /* FacebookClient.swift */,
+				484D03E51BBFB4F3007A9CCC /* FacebookConstants.swift */,
+				484D03E71BBFB51C007A9CCC /* FacebookEvent.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -193,6 +207,7 @@
 				484D039A1BBC7D64007A9CCC /* AppDelegate.swift */,
 				484D03A91BBC7D64007A9CCC /* Info.plist */,
 				484D03DE1BBDDDD5007A9CCC /* Bridging-Header.h */,
+				484D03E91BBFBF33007A9CCC /* CoreDataStackManager.swift */,
 			);
 			name = "Supporting files";
 			sourceTree = "<group>";
@@ -328,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				484D039D1BBC7D64007A9CCC /* SearchViewController.swift in Sources */,
+				484D03E61BBFB4F3007A9CCC /* FacebookConstants.swift in Sources */,
 				484D03D31BBC8919007A9CCC /* MapViewController.swift in Sources */,
 				484D03A31BBC7D64007A9CCC /* Eventer.xcdatamodeld in Sources */,
 				484D03CF1BBC88CA007A9CCC /* FavoritesViewController.swift in Sources */,
@@ -335,6 +351,10 @@
 				484D039B1BBC7D64007A9CCC /* AppDelegate.swift in Sources */,
 				484D03D11BBC8902007A9CCC /* SearchResultsViewController.swift in Sources */,
 				484D03D51BBC8E41007A9CCC /* DetailViewController.swift in Sources */,
+				484D03EA1BBFBF33007A9CCC /* CoreDataStackManager.swift in Sources */,
+				484D03E41BBFB47A007A9CCC /* FacebookClient.swift in Sources */,
+				484D03E81BBFB51C007A9CCC /* FacebookEvent.swift in Sources */,
+				484D03E21BBFB466007A9CCC /* FacebookConvenient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
