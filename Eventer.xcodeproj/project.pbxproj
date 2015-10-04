@@ -26,8 +26,9 @@
 		484D03E21BBFB466007A9CCC /* FacebookConvenient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03E11BBFB466007A9CCC /* FacebookConvenient.swift */; settings = {ASSET_TAGS = (); }; };
 		484D03E41BBFB47A007A9CCC /* FacebookClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03E31BBFB47A007A9CCC /* FacebookClient.swift */; settings = {ASSET_TAGS = (); }; };
 		484D03E61BBFB4F3007A9CCC /* FacebookConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03E51BBFB4F3007A9CCC /* FacebookConstants.swift */; settings = {ASSET_TAGS = (); }; };
-		484D03E81BBFB51C007A9CCC /* FacebookEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03E71BBFB51C007A9CCC /* FacebookEvent.swift */; settings = {ASSET_TAGS = (); }; };
+		484D03E81BBFB51C007A9CCC /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03E71BBFB51C007A9CCC /* Event.swift */; settings = {ASSET_TAGS = (); }; };
 		484D03EA1BBFBF33007A9CCC /* CoreDataStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03E91BBFBF33007A9CCC /* CoreDataStackManager.swift */; settings = {ASSET_TAGS = (); }; };
+		484D03ED1BBFE55E007A9CCC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03EC1BBFE55E007A9CCC /* Photo.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,8 +75,9 @@
 		484D03E11BBFB466007A9CCC /* FacebookConvenient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookConvenient.swift; path = models/FacebookConvenient.swift; sourceTree = "<group>"; };
 		484D03E31BBFB47A007A9CCC /* FacebookClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookClient.swift; path = models/FacebookClient.swift; sourceTree = "<group>"; };
 		484D03E51BBFB4F3007A9CCC /* FacebookConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookConstants.swift; path = models/FacebookConstants.swift; sourceTree = "<group>"; };
-		484D03E71BBFB51C007A9CCC /* FacebookEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookEvent.swift; path = models/FacebookEvent.swift; sourceTree = "<group>"; };
+		484D03E71BBFB51C007A9CCC /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = models/Event.swift; sourceTree = "<group>"; };
 		484D03E91BBFBF33007A9CCC /* CoreDataStackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStackManager.swift; path = supporting/CoreDataStackManager.swift; sourceTree = "<group>"; };
+		484D03EC1BBFE55E007A9CCC /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Photo.swift; path = models/Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,10 +163,9 @@
 		484D03CB1BBC7E4C007A9CCC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				484D03E11BBFB466007A9CCC /* FacebookConvenient.swift */,
-				484D03E31BBFB47A007A9CCC /* FacebookClient.swift */,
-				484D03E51BBFB4F3007A9CCC /* FacebookConstants.swift */,
-				484D03E71BBFB51C007A9CCC /* FacebookEvent.swift */,
+				484D03EB1BBFE256007A9CCC /* Facebook */,
+				484D03E71BBFB51C007A9CCC /* Event.swift */,
+				484D03EC1BBFE55E007A9CCC /* Photo.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -210,6 +211,16 @@
 				484D03E91BBFBF33007A9CCC /* CoreDataStackManager.swift */,
 			);
 			name = "Supporting files";
+			sourceTree = "<group>";
+		};
+		484D03EB1BBFE256007A9CCC /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				484D03E11BBFB466007A9CCC /* FacebookConvenient.swift */,
+				484D03E31BBFB47A007A9CCC /* FacebookClient.swift */,
+				484D03E51BBFB4F3007A9CCC /* FacebookConstants.swift */,
+			);
+			name = Facebook;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				484D03ED1BBFE55E007A9CCC /* Photo.swift in Sources */,
 				484D039D1BBC7D64007A9CCC /* SearchViewController.swift in Sources */,
 				484D03E61BBFB4F3007A9CCC /* FacebookConstants.swift in Sources */,
 				484D03D31BBC8919007A9CCC /* MapViewController.swift in Sources */,
@@ -353,7 +365,7 @@
 				484D03D51BBC8E41007A9CCC /* DetailViewController.swift in Sources */,
 				484D03EA1BBFBF33007A9CCC /* CoreDataStackManager.swift in Sources */,
 				484D03E41BBFB47A007A9CCC /* FacebookClient.swift in Sources */,
-				484D03E81BBFB51C007A9CCC /* FacebookEvent.swift in Sources */,
+				484D03E81BBFB51C007A9CCC /* Event.swift in Sources */,
 				484D03E21BBFB466007A9CCC /* FacebookConvenient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

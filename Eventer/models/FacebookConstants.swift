@@ -9,6 +9,11 @@
 import UIKit
 
 extension FacebookClient {
+    
+    struct Constants {
+        static let CoondinatesDelta = 0.5
+    }
+    
     struct JSONResponseKeys {
         static let Result = "result"
         static let Message = "message"

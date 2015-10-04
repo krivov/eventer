@@ -9,6 +9,8 @@
 import UIKit
 
 class FacebookClient: NSObject {
+    
+    static let sharedInstance = FacebookClient()
 
     /* Shared session */
     var session: NSURLSession
@@ -41,6 +43,26 @@ class FacebookClient: NSObject {
             task.resume()
     }
     
+    func fbGraphSearchEvents(text: String, completionHandler: (result: AnyObject!, error: NSError?) -> Void) {
+        
+        let parameters = [
+            "q" : text,
+            "type" : "event",
+            "since" : "now",
+            "until" : "next year",
+            "limit" : 1000,
+        ]
+        
+        FBSDKGraphRequest(graphPath: "/search", parameters: parameters as [NSObject : AnyObject]).startWithCompletionHandler { (connection, result, downloadError) -> Void in
+            
+            if let error = downloadError {
+                completionHandler(result: nil, error: error)
+            } else {
+                completionHandler(result: result, error: nil)
+            }
+        }
+    }
+    
     /* Helper: Given raw JSON, return a usable Foundation object */
     class func parseJSONWithCompletionHandler(data: NSData, completionHandler: (result: AnyObject!, error: NSError?) -> Void) {
         
@@ -50,6 +72,9 @@ class FacebookClient: NSObject {
             parsedResult = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
         } catch let error as NSError {
             parsingError = error
+            parsedResult = nil
+        } catch {
+            parsingError = NSError(domain: "Eventer", code: 400, userInfo: nil)
             parsedResult = nil
         }
         
@@ -98,7 +123,7 @@ class FacebookClient: NSObject {
                         
                         let userInfo = [NSLocalizedDescriptionKey: message]
                         
-                        return NSError(domain: "Virtual Tourist Error", code: 1, userInfo: userInfo)
+                        return NSError(domain: "Eventer Error", code: 1, userInfo: userInfo)
                     }
             }
         }

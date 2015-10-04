@@ -189,8 +189,11 @@
                                 <rect key="frame" x="45" y="143" width="241" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="changeSearchTextField:" destination="cvK-93-uRw" eventType="editingChanged" id="fiw-zd-tbu"/>
+                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqd-pF-M4e">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqd-pF-M4e">
                                 <rect key="frame" x="136" y="199" width="48" height="30"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
