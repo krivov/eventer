@@ -47,10 +47,11 @@ class FacebookClient: NSObject {
         
         let parameters = [
             "q" : text,
-            "type" : "event",
-            "since" : "now",
-            "until" : "next year",
-            "limit" : 1000,
+            "type" : JSONRequestParams.TypeEvent,
+            "fields" : JSONRequestParams.Fields,
+            "since" : JSONRequestParams.Since,
+            "until" : JSONRequestParams.Until,
+            "limit" : JSONRequestParams.Limit
         ]
         
         FBSDKGraphRequest(graphPath: "/search", parameters: parameters as [NSObject : AnyObject]).startWithCompletionHandler { (connection, result, downloadError) -> Void in

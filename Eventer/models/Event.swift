@@ -14,11 +14,26 @@ import CoreData
 
 class Event: NSManagedObject {
 
+    @NSManaged var id: Double
+    @NSManaged var attending_count: Double
+    @NSManaged var city: Double
+    @NSManaged var country: Double
+    @NSManaged var declined_count: Double
+    @NSManaged var descr: String
+    @NSManaged var end_time: Double
     @NSManaged var latitude: Double
     @NSManaged var longitude: Double
-    @NSManaged var title: String
-    @NSManaged var descr: String
-    @NSManaged var photos: NSMutableOrderedSet
+    @NSManaged var maybe_count: Double
+    @NSManaged var name: String
+    @NSManaged var noreply_count: Double
+    @NSManaged var owner_id: Double
+    @NSManaged var owner_name: Double
+    @NSManaged var place: Double
+    @NSManaged var start_time: Double
+    @NSManaged var street: Double
+    @NSManaged var ticket_uri: Double
+    
+    @NSManaged var cover: Photo
     
     var coordinate: CLLocationCoordinate2D {
         
@@ -47,6 +62,5 @@ class Event: NSManagedObject {
         
         self.latitude = coordinate.latitude
         self.longitude = coordinate.longitude
-        self.photos = NSMutableOrderedSet()
     }
 }
