@@ -17,7 +17,16 @@ extension FacebookClient {
             if let error = error {
                 completionHandler(events: [], error: error)
             } else {
-                completionHandler(events: [], error: error)
+                
+                var events : [Event] = []
+                
+                for eventDictionary in result! {
+                     let newEvent = Event(fbEventArray: eventDictionary as! [String : AnyObject], context: self.sharedContext)
+                    
+                    events.append(newEvent)
+                }
+                
+                completionHandler(events: events, error: nil)
             }
             print(result)
         }

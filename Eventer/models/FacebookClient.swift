@@ -43,7 +43,7 @@ class FacebookClient: NSObject {
             task.resume()
     }
     
-    func fbGraphSearchEvents(text: String, completionHandler: (result: AnyObject!, error: NSError?) -> Void) {
+    func fbGraphSearchEvents(text: String, completionHandler: (result: [[String:AnyObject]]?, error: NSError?) -> Void) {
         
         let parameters = [
             "q" : text,
@@ -59,7 +59,18 @@ class FacebookClient: NSObject {
             if let error = downloadError {
                 completionHandler(result: nil, error: error)
             } else {
-                completionHandler(result: result, error: nil)
+                //print(result)
+                //let json = JSON(data: result)
+                //if let userName = json[0]["user"]["name"].string {
+                    //Now you got your value
+                //}
+                
+                if let data = result["data"] as? [[String:AnyObject]] {
+                    completionHandler(result: data, error: nil)
+                } else {
+                    completionHandler(result: nil, error: downloadError)
+                }
+                
             }
         }
     }
