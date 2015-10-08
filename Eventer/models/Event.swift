@@ -34,6 +34,7 @@ class Event: NSManagedObject {
     @NSManaged var ticket_uri: String
     
     @NSManaged var is_favorite: Bool
+    @NSManaged var current_search: Bool
     
     @NSManaged var cover: Photo
     
@@ -155,5 +156,6 @@ class Event: NSManagedObject {
         }
         
         self.is_favorite = false;
+        self.current_search = true;
     }
 }

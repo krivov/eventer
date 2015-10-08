@@ -10,10 +10,18 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    var event: Event!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        nameLabel.text = event.name
     }
 
     override func didReceiveMemoryWarning() {

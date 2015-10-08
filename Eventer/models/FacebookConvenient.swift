@@ -21,10 +21,15 @@ extension FacebookClient {
                 var events : [Event] = []
                 
                 for eventDictionary in result! {
-                     let newEvent = Event(fbEventArray: eventDictionary as! [String : AnyObject], context: self.sharedContext)
+                     let newEvent = Event(fbEventArray: eventDictionary, context: self.sharedContext)
                     
                     events.append(newEvent)
                 }
+                
+                //Save the context
+                dispatch_async(dispatch_get_main_queue(), {
+                    CoreDataStackManager.sharedInstance().saveContext()
+                })
                 
                 completionHandler(events: events, error: nil)
             }

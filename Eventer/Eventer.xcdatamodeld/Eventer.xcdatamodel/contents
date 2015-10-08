@@ -4,6 +4,7 @@
         <attribute name="attending_count" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="current_search" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="declined_count" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="descr" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="end_time" optional="YES" attributeType="Date" syncable="YES"/>
@@ -28,7 +29,7 @@
         <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="cover" inverseEntity="Event" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="-63" positionY="-18" width="128" height="345"/>
+        <element name="Event" positionX="-63" positionY="-18" width="128" height="360"/>
         <element name="Photo" positionX="-54" positionY="18" width="128" height="90"/>
     </elements>
 </model>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		480359E21BC70E0B00501C9B /* EventSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480359E11BC70E0B00501C9B /* EventSearchTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		484D039B1BBC7D64007A9CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D039A1BBC7D64007A9CCC /* AppDelegate.swift */; };
 		484D039D1BBC7D64007A9CCC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D039C1BBC7D64007A9CCC /* SearchViewController.swift */; };
 		484D03A01BBC7D64007A9CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484D039E1BBC7D64007A9CCC /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		480359E11BC70E0B00501C9B /* EventSearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventSearchTableViewCell.swift; path = views/EventSearchTableViewCell.swift; sourceTree = "<group>"; };
 		484D03971BBC7D64007A9CCC /* Eventer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		484D039A1BBC7D64007A9CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		484D039C1BBC7D64007A9CCC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			children = (
 				484D03A61BBC7D64007A9CCC /* LaunchScreen.storyboard */,
 				484D039E1BBC7D64007A9CCC /* Main.storyboard */,
+				480359E11BC70E0B00501C9B /* EventSearchTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				484D039D1BBC7D64007A9CCC /* SearchViewController.swift in Sources */,
 				484D03E61BBFB4F3007A9CCC /* FacebookConstants.swift in Sources */,
 				48B197761BC31F65007D2CE2 /* SwiftyJSON.swift in Sources */,
+				480359E21BC70E0B00501C9B /* EventSearchTableViewCell.swift in Sources */,
 				484D03D31BBC8919007A9CCC /* MapViewController.swift in Sources */,
 				484D03A31BBC7D64007A9CCC /* Eventer.xcdatamodeld in Sources */,
 				484D03CF1BBC88CA007A9CCC /* FavoritesViewController.swift in Sources */,
