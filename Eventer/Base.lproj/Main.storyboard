@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Favorites View Controller-->
@@ -146,8 +147,8 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kw0-ZX-knY">
-                                <rect key="frame" x="0.0" y="149" width="320" height="282"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kw0-ZX-knY">
+                                <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -206,17 +207,15 @@
                                     <outlet property="delegate" destination="2P2-kY-IUM" id="5lm-kZ-R2m"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPV-gh-g00">
-                                <rect key="frame" x="141" y="91" width="38" height="30"/>
-                                <animations/>
-                                <state key="normal" title="detail"/>
-                                <connections>
-                                    <segue destination="PRi-SS-8fn" kind="show" id="D35-dh-kt6"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kw0-ZX-knY" firstAttribute="top" secondItem="9bC-kr-gzK" secondAttribute="bottom" id="64g-XB-vFM"/>
+                            <constraint firstItem="SBB-jL-RCc" firstAttribute="top" secondItem="Kw0-ZX-knY" secondAttribute="bottom" id="LRZ-wJ-s23"/>
+                            <constraint firstItem="Kw0-ZX-knY" firstAttribute="leading" secondItem="Hnj-5X-LgK" secondAttribute="leadingMargin" constant="-20" id="OhE-9b-u4t"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kw0-ZX-knY" secondAttribute="trailing" constant="-20" id="e5B-Me-o8N"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GVi-Tm-E4K">
                         <barButtonItem key="leftBarButtonItem" id="gSV-KZ-N0I">
@@ -226,6 +225,7 @@
                                 <animations/>
                                 <state key="normal" title="New search"/>
                                 <connections>
+                                    <action selector="newSearchTouch:" destination="2P2-kY-IUM" eventType="touchUpInside" id="HyV-7I-17t"/>
                                     <segue destination="i3K-v2-sp1" kind="showDetail" id="gpa-CZ-zIH"/>
                                 </connections>
                             </button>
@@ -447,6 +447,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="gpa-CZ-zIH"/>
-        <segue reference="D35-dh-kt6"/>
+        <segue reference="nVn-27-yDL"/>
     </inferredMetricsTieBreakers>
 </document>

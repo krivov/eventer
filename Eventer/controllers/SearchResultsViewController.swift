@@ -37,6 +37,14 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    
+    
+    @IBAction func newSearchTouch(sender: UIButton) {
+        
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

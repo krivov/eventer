@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SearchViewController: UIViewController, UITextFieldDelegate {
 
@@ -20,6 +21,33 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         searchField.delegate = self
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        dispatch_async(dispatch_get_main_queue(), {
+            let error: NSErrorPointer = nil
+            let fetchRequest = NSFetchRequest(entityName: "Event")
+            let results: [AnyObject]?
+            do {
+                results = try self.sharedContext.executeFetchRequest(fetchRequest)
+            } catch let error1 as NSError {
+                error.memory = error1
+                results = nil
+            }
+            
+            if results != nil {
+                var events = results as! [Event]
+                
+                for event: AnyObject in events
+                {
+                    self.sharedContext.deleteObject(event as! NSManagedObject)
+                }
+                
+                events.removeAll(keepCapacity: false)
+            }
+            
+            CoreDataStackManager.sharedInstance().saveContext()
+        })
     }
     
     @IBAction func touchSearchButton(sender: UIButton) {
@@ -62,6 +90,13 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         } else {
             searchButton.enabled = false
         }
+    }
+    
+    //=====================================================================
+    //MARK: Core Data
+    
+    var sharedContext: NSManagedObjectContext {
+        return CoreDataStackManager.sharedInstance().managedObjectContext!
     }
 }
 

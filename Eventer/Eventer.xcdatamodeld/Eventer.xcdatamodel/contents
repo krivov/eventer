@@ -23,7 +23,7 @@
         <attribute name="ticket_uri" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="cover" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Photo" inverseName="event" inverseEntity="Photo" syncable="YES"/>
     </entity>
-    <entity name="Photo" syncable="YES">
+    <entity name="Photo" representedClassName="Photo" syncable="YES">
         <attribute name="filePath" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="cover" inverseEntity="Event" syncable="YES"/>
