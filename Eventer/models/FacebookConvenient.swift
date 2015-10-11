@@ -33,7 +33,7 @@ extension FacebookClient {
                 
                 completionHandler(events: events, error: nil)
             }
-            print(result)
+            //print(result)
         }
         
         

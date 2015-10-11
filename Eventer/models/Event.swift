@@ -16,8 +16,8 @@ class Event: NSManagedObject {
 
     @NSManaged var id: Int64
     @NSManaged var attending_count: Int16
-    @NSManaged var city: String
-    @NSManaged var country: String
+    @NSManaged var city: String?
+    @NSManaged var country: String?
     @NSManaged var declined_count: Int16
     @NSManaged var descr: String
     @NSManaged var end_time: NSDate
@@ -29,7 +29,7 @@ class Event: NSManagedObject {
     @NSManaged var owner_id: Int64
     @NSManaged var owner_name: String
     @NSManaged var place: String
-    @NSManaged var start_time: NSDate
+    @NSManaged var start_time: NSDate?
     @NSManaged var street: String
     @NSManaged var ticket_uri: String
     

@@ -37,14 +37,6 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
 
         // Do any additional setup after loading the view.
     }
-    
-    
-    
-    
-    @IBAction func newSearchTouch(sender: UIButton) {
-        
-        
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -110,8 +102,24 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
         
         let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! EventSearchTableViewCell
         
+        cell.event = event
+        
         cell.nameLabel.text = event.name
-        cell.locationLabel.text = "\(event.city) \(event.country)"
+        
+        if event.city != nil && event.country != nil {
+            cell.locationLabel.text = "\(event.city!) \(event.country!)"
+        } else {
+            cell.locationLabel.hidden = true
+            cell.locationImage.hidden = true
+        }
+        
+        if event.start_time != nil {
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "dd-MM-yyyy'"
+            dateFormatter.timeZone = NSTimeZone()
+            
+            cell.dateLabel.text = dateFormatter.stringFromDate(event.start_time!)
+        }
         
         //cell.dateLabel.text = event.start_time
         
@@ -159,7 +167,7 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
         //Create fetch request for photos which match the sent Pin.
         let fetchRequest = NSFetchRequest(entityName: "Event")
         //fetchRequest.predicate = NSPredicate(format: "pin == %@", self.pin)
-        fetchRequest.sortDescriptors = []
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "start_time", ascending: false)]
         
         //Create fetched results controller with the new fetch request.
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,

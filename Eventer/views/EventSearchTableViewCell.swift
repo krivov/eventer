@@ -10,11 +10,22 @@ import UIKit
 
 class EventSearchTableViewCell: UITableViewCell {
 
+    var event: Event!
+    
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var locationImage: UIImageView!
     @IBOutlet weak var favoriteButton: UIButton!
+    
+    @IBAction func addToFavorite(sender: UIButton) {
+        if(self.event.is_favorite) {
+            
+        } else {
+            
+        }
+    }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

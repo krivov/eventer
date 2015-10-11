@@ -57,14 +57,14 @@
                                 <rect key="frame" x="138" y="120" width="44" height="39"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fuel Conference 2015" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LhZ-3b-N7a">
                                 <rect key="frame" x="57" y="86" width="207" height="26"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -102,20 +102,12 @@
                                 </items>
                             </navigationBar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EWj-RB-UHi">
-                                <rect key="frame" x="0.0" y="162" width="320" height="269"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                                 <animations/>
                                 <connections>
                                     <outlet property="delegate" destination="8tx-gp-lpA" id="9bo-0w-uJM"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWD-B2-KwT">
-                                <rect key="frame" x="141" y="105" width="38" height="30"/>
-                                <animations/>
-                                <state key="normal" title="detail"/>
-                                <connections>
-                                    <segue destination="PRi-SS-8fn" kind="show" id="nVn-27-yDL"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -148,7 +140,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kw0-ZX-knY">
-                                <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                                <rect key="frame" x="-4" y="64" width="320" height="367"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -160,33 +152,36 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fuel Conference 2015" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbV-by-t6B">
-                                                    <rect key="frame" x="8" y="24" width="266" height="23"/>
+                                                    <rect key="frame" x="12" y="24" width="257" height="23"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="19"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFC-me-XiG">
-                                                    <rect key="frame" x="282" y="20" width="30" height="30"/>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFC-me-XiG">
+                                                    <rect key="frame" x="277" y="20" width="35" height="35"/>
                                                     <animations/>
-                                                    <state key="normal" title="F"/>
+                                                    <state key="normal" image="add_favorite"/>
+                                                    <connections>
+                                                        <action selector="addToFavorite:" destination="qsu-MF-C4h" eventType="touchUpInside" id="OBB-hR-etH"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="03.12.2015 18:45" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HjI-p6-f4n">
-                                                    <rect key="frame" x="8" y="3" width="131" height="17"/>
+                                                    <rect key="frame" x="12" y="3" width="131" height="17"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Minsk, Belarus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fr6-73-Jzs">
-                                                    <rect key="frame" x="38" y="50" width="236" height="20"/>
+                                                    <rect key="frame" x="37" y="52" width="236" height="20"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s3W-PZ-0AO">
-                                                    <rect key="frame" x="8" y="50" width="22" height="20"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="s3W-PZ-0AO">
+                                                    <rect key="frame" x="12" y="50" width="22" height="20"/>
                                                     <animations/>
                                                 </imageView>
                                             </subviews>
@@ -218,17 +213,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GVi-Tm-E4K">
-                        <barButtonItem key="leftBarButtonItem" id="gSV-KZ-N0I">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bQl-bn-Si4">
-                                <rect key="frame" x="16" y="7" width="81" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <state key="normal" title="New search"/>
-                                <connections>
-                                    <action selector="newSearchTouch:" destination="2P2-kY-IUM" eventType="touchUpInside" id="HyV-7I-17t"/>
-                                    <segue destination="i3K-v2-sp1" kind="showDetail" id="gpa-CZ-zIH"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="gSV-KZ-N0I">
+                            <connections>
+                                <segue destination="i3K-v2-sp1" kind="showDetail" id="1G6-A5-u4G"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -237,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3d-MM-2uM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2645" y="38"/>
+            <point key="canvasLocation" x="2645" y="33"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aVu-i5-0ax">
@@ -296,7 +284,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" id="wjZ-kf-Sdn"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="search" id="wjZ-kf-Sdn"/>
                     <navigationItem key="navigationItem" id="XDk-AO-3fk"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
@@ -326,7 +314,7 @@
                                 <rect key="frame" x="85" y="78" width="150" height="115"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="34"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="find and save interesting events on facebook" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y91-KU-9Nk">
@@ -337,7 +325,7 @@
                                     <constraint firstAttribute="height" constant="123" id="rqf-QX-vh1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="27"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDR-C7-xgT" customClass="FBSDKLoginButton">
@@ -388,7 +376,7 @@
         <scene sceneID="t7l-Xk-d1s">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mqm-kL-1br" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" id="bR2-Ml-pZZ"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="favorites" id="bR2-Ml-pZZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bqD-F7-Lxr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -408,7 +396,7 @@
         <scene sceneID="LRo-AN-35A">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OnS-j8-1tr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="List" id="vte-3W-Woh"/>
+                    <tabBarItem key="tabBarItem" title="List" image="list" id="vte-3W-Woh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z25-Sn-o9R">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -428,7 +416,7 @@
         <scene sceneID="Hkc-k7-HMt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E1C-L3-uYw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" id="ziF-1u-VR0"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" id="ziF-1u-VR0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OP9-Ge-gQX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -445,8 +433,15 @@
             <point key="canvasLocation" x="2169" y="695"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="add_favorite" width="30" height="30"/>
+        <image name="favorites" width="30" height="30"/>
+        <image name="list" width="30" height="30"/>
+        <image name="location" width="30" height="30"/>
+        <image name="map" width="30" height="30"/>
+        <image name="search" width="30" height="30"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gpa-CZ-zIH"/>
-        <segue reference="nVn-27-yDL"/>
+        <segue reference="1G6-A5-u4G"/>
     </inferredMetricsTieBreakers>
 </document>
