@@ -32,54 +32,23 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
         }
         
         if (error != nil) {
-            showAlertWithTitleAndRetry("Error", message: "Error download photos for the selected pin", retryNewPhotoSet: false)
+            Helper.showAlert(self, title: "Error", message: "Error of displaing events")
         }
+        
+        var backButton = UIBarButtonItem(title: "New search", style: UIBarButtonItemStyle.Done, target: self, action: "backButton")
+        self.navigationItem.leftBarButtonItem = backButton
 
         // Do any additional setup after loading the view.
+    }
+    
+    func backButton() {
+        print("BACK")
+        self.performSegueWithIdentifier("listNewSearch", sender: self)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    //show alert
-    func showAlertWithTitleAndRetry(title: String, message: String, retryNewPhotoSet: Bool) {
-        
-        let alert = UIAlertController(
-            title: title,
-            message: message,
-            preferredStyle: UIAlertControllerStyle.Alert
-        )
-        
-        alert.addAction(
-            UIAlertAction(
-                title: "OK",
-                style: UIAlertActionStyle.Default,
-                handler: {
-                    action in
-                    alert.dismissViewControllerAnimated(true, completion: nil)
-                }
-            )
-        )
-        
-        
-        if retryNewPhotoSet {
-            
-            alert.addAction(
-                UIAlertAction(
-                    title: "Retry",
-                    style: UIAlertActionStyle.Destructive,
-                    handler: {
-                        action in
-                        
-                        alert.dismissViewControllerAnimated(true, completion: nil)
-                    }
-                )
-            )
-        }
-        
-        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     //=====================================================================

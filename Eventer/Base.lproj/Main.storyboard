@@ -18,24 +18,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UgE-E4-d3L">
-                                <rect key="frame" x="0.0" y="178" width="320" height="253"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelectionDuringEditing="YES" allowsMultipleSelection="YES" allowsMultipleSelectionDuringEditing="YES" rowHeight="80" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="UgE-E4-d3L">
+                                <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventSearchCell" rowHeight="80" id="NgF-2z-xSC" customClass="EventSearchTableViewCell" customModule="Eventer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="65" width="320" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NgF-2z-xSC" id="Pfz-gA-NYT">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fuel Conference 2015" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAg-dO-zBc">
+                                                    <rect key="frame" x="14" y="28" width="257" height="23"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="03.12.2015 18:45" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBl-4i-LJk">
+                                                    <rect key="frame" x="14" y="8" width="131" height="17"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Minsk, Belarus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npj-kX-6sM">
+                                                    <rect key="frame" x="38" y="53" width="236" height="20"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="Xzh-bK-xnt">
+                                                    <rect key="frame" x="15" y="52" width="22" height="20"/>
+                                                    <animations/>
+                                                </imageView>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="BBl-4i-LJk" id="DCI-MQ-Vcg"/>
+                                            <outlet property="locationImage" destination="Xzh-bK-xnt" id="S7Y-ZU-s4M"/>
+                                            <outlet property="locationLabel" destination="npj-kX-6sM" id="esO-Nd-GbU"/>
+                                            <outlet property="nameLabel" destination="KAg-dO-zBc" id="7IP-e3-LCd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wR-dG-zrV">
-                                <rect key="frame" x="141" y="100" width="38" height="30"/>
-                                <animations/>
-                                <state key="normal" title="detail"/>
-                                <connections>
-                                    <segue destination="PRi-SS-8fn" kind="show" id="KH5-8i-pXI"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="UgE-E4-d3L" secondAttribute="trailing" constant="-20" id="AOF-d5-dNu"/>
+                            <constraint firstItem="gf6-GU-8YO" firstAttribute="top" secondItem="UgE-E4-d3L" secondAttribute="bottom" id="iVa-4q-QpW"/>
+                            <constraint firstItem="UgE-E4-d3L" firstAttribute="leading" secondItem="wMx-AB-a4f" secondAttribute="leadingMargin" constant="-20" id="q0q-N4-1VB"/>
+                            <constraint firstItem="UgE-E4-d3L" firstAttribute="top" secondItem="Smk-Dn-1OA" secondAttribute="bottom" id="sZM-sX-gnF"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NI8-yk-cnE"/>
+                    <connections>
+                        <outlet property="tableView" destination="UgE-E4-d3L" id="JDF-aw-tNr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VOV-e7-doc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -212,20 +258,15 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Kw0-ZX-knY" secondAttribute="trailing" constant="-20" id="e5B-Me-o8N"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="GVi-Tm-E4K">
-                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="gSV-KZ-N0I">
-                            <connections>
-                                <segue destination="i3K-v2-sp1" kind="showDetail" id="1G6-A5-u4G"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="GVi-Tm-E4K"/>
                     <connections>
                         <outlet property="tableView" destination="Kw0-ZX-knY" id="NdB-uI-Qg1"/>
+                        <segue destination="i3K-v2-sp1" kind="showDetail" identifier="listNewSearch" id="Qyg-aY-fsA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3d-MM-2uM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2645" y="33"/>
+            <point key="canvasLocation" x="2645" y="38"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aVu-i5-0ax">
@@ -442,6 +483,6 @@
         <image name="search" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1G6-A5-u4G"/>
+        <segue reference="Qyg-aY-fsA"/>
     </inferredMetricsTieBreakers>
 </document>

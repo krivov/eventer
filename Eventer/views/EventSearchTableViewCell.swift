@@ -23,6 +23,7 @@ class EventSearchTableViewCell: UITableViewCell {
             event.is_favorite = false
         } else {
             event.is_favorite = true
+            event.current_search = false
         }
         
         setFavoriteButtonImage()

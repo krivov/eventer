@@ -21,6 +21,8 @@ class DetailViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = false
+        
         nameLabel.text = event.name
     }
 
