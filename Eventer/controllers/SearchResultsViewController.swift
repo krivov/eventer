@@ -103,6 +103,7 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
         let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! EventSearchTableViewCell
         
         cell.event = event
+        cell.setFavoriteButtonImage()
         
         cell.nameLabel.text = event.name
         
@@ -166,7 +167,8 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
         
         //Create fetch request for photos which match the sent Pin.
         let fetchRequest = NSFetchRequest(entityName: "Event")
-        //fetchRequest.predicate = NSPredicate(format: "pin == %@", self.pin)
+        fetchRequest.predicate = NSPredicate(format: "current_search == %@", true)
+        
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "start_time", ascending: false)]
         
         //Create fetched results controller with the new fetch request.

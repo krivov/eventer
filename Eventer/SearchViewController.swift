@@ -27,6 +27,10 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         dispatch_async(dispatch_get_main_queue(), {
             let error: NSErrorPointer = nil
             let fetchRequest = NSFetchRequest(entityName: "Event")
+            
+            let predicateIsFavorite = NSPredicate(format: "is_favorite != %@", argumentArray: [true])
+            fetchRequest.predicate = predicateIsFavorite
+            
             let results: [AnyObject]?
             do {
                 results = try self.sharedContext.executeFetchRequest(fetchRequest)

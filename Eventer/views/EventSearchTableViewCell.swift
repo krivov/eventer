@@ -20,12 +20,29 @@ class EventSearchTableViewCell: UITableViewCell {
     
     @IBAction func addToFavorite(sender: UIButton) {
         if(self.event.is_favorite) {
-            
+            event.is_favorite = false
         } else {
-            
+            event.is_favorite = true
         }
+        
+        setFavoriteButtonImage()
+        
+        dispatch_async(dispatch_get_main_queue(), {
+            CoreDataStackManager.sharedInstance().saveContext()
+        })
     }
     
+    func setFavoriteButtonImage() {
+        var imageName = ""
+        
+        if self.event.is_favorite {
+            imageName = "add_favorite_select"
+        } else {
+            imageName = "add_favorite"
+        }
+        
+        favoriteButton.setImage(UIImage(named: imageName), forState: UIControlState.Normal)
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
