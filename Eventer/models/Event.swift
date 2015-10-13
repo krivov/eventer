@@ -12,7 +12,7 @@ import CoreData
 
 @objc(Event)
 
-class Event: NSManagedObject {
+class Event: NSManagedObject, MKAnnotation {
 
     @NSManaged var id: Int64
     @NSManaged var attending_count: Int16
@@ -37,6 +37,9 @@ class Event: NSManagedObject {
     @NSManaged var current_search: Bool
     
     @NSManaged var cover: Photo
+    
+    var title: String?
+    var subtitle: String?
     
     var coordinate: CLLocationCoordinate2D {
         
@@ -76,6 +79,7 @@ class Event: NSManagedObject {
         
         if let name = fbEventArray["name"] as? String {
             self.name = name
+            self.title = name
         }
         
         if let declined_count = fbEventArray["declined_count"] as? Int {
@@ -84,6 +88,7 @@ class Event: NSManagedObject {
         
         if let descr = fbEventArray["description"] as? String {
             self.descr = descr
+            self.subtitle = descr
         }
         
         if let end_time = fbEventArray["end_time"] as? String {

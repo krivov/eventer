@@ -35,7 +35,7 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
             Helper.showAlert(self, title: "Error", message: "Error of displaing events")
         }
         
-        var backButton = UIBarButtonItem(title: "New search", style: UIBarButtonItemStyle.Done, target: self, action: "backButton")
+        let backButton = UIBarButtonItem(title: "New search", style: UIBarButtonItemStyle.Done, target: self, action: "backButton")
         self.navigationItem.leftBarButtonItem = backButton
 
         // Do any additional setup after loading the view.

@@ -147,18 +147,27 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EWj-RB-UHi">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EWj-RB-UHi">
                                 <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                                 <animations/>
                                 <connections>
-                                    <outlet property="delegate" destination="8tx-gp-lpA" id="9bo-0w-uJM"/>
+                                    <outlet property="delegate" destination="8tx-gp-lpA" id="Lec-lI-8fI"/>
                                 </connections>
                             </mapView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EWj-RB-UHi" firstAttribute="leading" secondItem="qi5-6G-jD1" secondAttribute="leadingMargin" constant="-20" id="90D-4B-uFV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EWj-RB-UHi" secondAttribute="trailing" constant="-20" id="dpM-gM-b1D"/>
+                            <constraint firstItem="EWj-RB-UHi" firstAttribute="top" secondItem="fI8-4P-g1y" secondAttribute="bottom" id="edc-T8-3lP"/>
+                            <constraint firstItem="sUV-eQ-pg4" firstAttribute="top" secondItem="EWj-RB-UHi" secondAttribute="bottom" id="sVL-J0-XtP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XOZ-sh-eRQ"/>
+                    <connections>
+                        <outlet property="mapView" destination="EWj-RB-UHi" id="OD4-it-0rf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q7j-n7-Etc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

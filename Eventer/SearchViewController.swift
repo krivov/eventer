@@ -76,8 +76,8 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     func stopLoading() {
-        self.searchButton.hidden = true;
-        self.activityIndicator.startAnimating()
+        self.searchButton.hidden = false;
+        self.activityIndicator.stopAnimating()
         self.searchField.enabled = true
     }
     
