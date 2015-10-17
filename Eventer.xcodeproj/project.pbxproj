@@ -32,6 +32,12 @@
 		484D03ED1BBFE55E007A9CCC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D03EC1BBFE55E007A9CCC /* Photo.swift */; settings = {ASSET_TAGS = (); }; };
 		4896666B1BCAFE7200C51D4A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4896666A1BCAFE7200C51D4A /* Helper.swift */; settings = {ASSET_TAGS = (); }; };
 		48B197761BC31F65007D2CE2 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B197751BC31F65007D2CE2 /* SwiftyJSON.swift */; settings = {ASSET_TAGS = (); }; };
+		48E5F79A1BD23A5200ED6F7D /* DatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E5F7991BD23A5200ED6F7D /* DatesTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		48E5F79C1BD23A7B00ED6F7D /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E5F79B1BD23A7B00ED6F7D /* LocationTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		48E5F79E1BD23AB900ED6F7D /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E5F79D1BD23AB900ED6F7D /* DescriptionTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		48E5F7A01BD23B1500ED6F7D /* OwnerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E5F79F1BD23B1500ED6F7D /* OwnerTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		48E5F7A21BD23B6C00ED6F7D /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E5F7A11BD23B6C00ED6F7D /* TicketTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		48E5F7A41BD23B8200ED6F7D /* CountsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E5F7A31BD23B8200ED6F7D /* CountsTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +90,12 @@
 		484D03EC1BBFE55E007A9CCC /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Photo.swift; path = models/Photo.swift; sourceTree = "<group>"; };
 		4896666A1BCAFE7200C51D4A /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helper.swift; path = supporting/Helper.swift; sourceTree = "<group>"; };
 		48B197751BC31F65007D2CE2 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = supporting/SwiftyJSON.swift; sourceTree = "<group>"; };
+		48E5F7991BD23A5200ED6F7D /* DatesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatesTableViewCell.swift; path = views/DetailTableView/DatesTableViewCell.swift; sourceTree = "<group>"; };
+		48E5F79B1BD23A7B00ED6F7D /* LocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationTableViewCell.swift; path = views/DetailTableView/LocationTableViewCell.swift; sourceTree = "<group>"; };
+		48E5F79D1BD23AB900ED6F7D /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DescriptionTableViewCell.swift; path = views/DetailTableView/DescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		48E5F79F1BD23B1500ED6F7D /* OwnerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OwnerTableViewCell.swift; path = views/DetailTableView/OwnerTableViewCell.swift; sourceTree = "<group>"; };
+		48E5F7A11BD23B6C00ED6F7D /* TicketTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TicketTableViewCell.swift; path = views/DetailTableView/TicketTableViewCell.swift; sourceTree = "<group>"; };
+		48E5F7A31BD23B8200ED6F7D /* CountsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountsTableViewCell.swift; path = views/DetailTableView/CountsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +204,7 @@
 		484D03CD1BBC7E60007A9CCC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				48E5F7981BD23A1700ED6F7D /* DetailTableView */,
 				484D03A61BBC7D64007A9CCC /* LaunchScreen.storyboard */,
 				484D039E1BBC7D64007A9CCC /* Main.storyboard */,
 				480359E11BC70E0B00501C9B /* EventSearchTableViewCell.swift */,
@@ -230,6 +243,19 @@
 				484D03E51BBFB4F3007A9CCC /* FacebookConstants.swift */,
 			);
 			name = Facebook;
+			sourceTree = "<group>";
+		};
+		48E5F7981BD23A1700ED6F7D /* DetailTableView */ = {
+			isa = PBXGroup;
+			children = (
+				48E5F7991BD23A5200ED6F7D /* DatesTableViewCell.swift */,
+				48E5F79B1BD23A7B00ED6F7D /* LocationTableViewCell.swift */,
+				48E5F79D1BD23AB900ED6F7D /* DescriptionTableViewCell.swift */,
+				48E5F79F1BD23B1500ED6F7D /* OwnerTableViewCell.swift */,
+				48E5F7A11BD23B6C00ED6F7D /* TicketTableViewCell.swift */,
+				48E5F7A31BD23B8200ED6F7D /* CountsTableViewCell.swift */,
+			);
+			name = DetailTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,12 +396,18 @@
 				484D03D31BBC8919007A9CCC /* MapViewController.swift in Sources */,
 				484D03A31BBC7D64007A9CCC /* Eventer.xcdatamodeld in Sources */,
 				484D03CF1BBC88CA007A9CCC /* FavoritesViewController.swift in Sources */,
+				48E5F7A01BD23B1500ED6F7D /* OwnerTableViewCell.swift in Sources */,
 				4896666B1BCAFE7200C51D4A /* Helper.swift in Sources */,
 				484D03E01BBDE382007A9CCC /* LoginViewController.swift in Sources */,
 				484D039B1BBC7D64007A9CCC /* AppDelegate.swift in Sources */,
 				484D03D11BBC8902007A9CCC /* SearchResultsViewController.swift in Sources */,
 				484D03D51BBC8E41007A9CCC /* DetailViewController.swift in Sources */,
+				48E5F79C1BD23A7B00ED6F7D /* LocationTableViewCell.swift in Sources */,
+				48E5F79A1BD23A5200ED6F7D /* DatesTableViewCell.swift in Sources */,
 				484D03EA1BBFBF33007A9CCC /* CoreDataStackManager.swift in Sources */,
+				48E5F7A21BD23B6C00ED6F7D /* TicketTableViewCell.swift in Sources */,
+				48E5F79E1BD23AB900ED6F7D /* DescriptionTableViewCell.swift in Sources */,
+				48E5F7A41BD23B8200ED6F7D /* CountsTableViewCell.swift in Sources */,
 				484D03E41BBFB47A007A9CCC /* FacebookClient.swift in Sources */,
 				484D03E81BBFB51C007A9CCC /* Event.swift in Sources */,
 				484D03E21BBFB466007A9CCC /* FacebookConvenient.swift in Sources */,

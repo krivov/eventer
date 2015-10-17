@@ -10,9 +10,11 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    var event: Event!
-    
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var eventImage: UIImageView!
+    
+    var event: Event!
     
     override func viewDidLoad() {
         super.viewDidLoad()
