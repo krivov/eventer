@@ -85,7 +85,7 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
         
         if event.start_time != nil {
             let dateFormatter = NSDateFormatter()
-            dateFormatter.dateFormat = "dd-MM-yyyy'"
+            dateFormatter.dateFormat = "dd-MM-yyyy"
             dateFormatter.timeZone = NSTimeZone()
             
             cell.dateLabel.text = dateFormatter.stringFromDate(event.start_time!)

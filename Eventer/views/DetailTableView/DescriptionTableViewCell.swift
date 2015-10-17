@@ -12,4 +12,28 @@ class DescriptionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var descriptionText: UITextView!
     
+    func setDescrText(text: String) {
+        self.descriptionText.text = text
+        
+        var frame: CGRect = descriptionText.frame
+        let cHeight: CGFloat = descriptionText.contentSize.height
+        frame.size.height = cHeight + 8.0
+        descriptionText.frame = frame
+    }
+    
+    func getDescrTextHeight(text: String) -> CGFloat {
+        self.descriptionText.text = text
+        
+        let fixedWidth = descriptionText.frame.size.width
+        descriptionText.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.max))
+        let newSize = descriptionText.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.max))
+        var newFrame = descriptionText.frame
+        newFrame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height)
+        descriptionText.frame = newFrame;
+        
+        return newFrame.size.height + 8.0
+        
+        //return descriptionText.contentSize.height + 18.0
+    }
+    
 }

@@ -118,43 +118,69 @@
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="datesCell" rowHeight="72" id="pLi-J0-WJ0" customClass="DatesTableViewCell" customModule="Eventer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="390" height="72"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="datesCell" rowHeight="70" id="pLi-J0-WJ0" customClass="DatesTableViewCell" customModule="Eventer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="390" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pLi-J0-WJ0" id="yeB-3J-XWC">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="71.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8h-Ym-wge">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8h-Ym-wge">
                                                     <rect key="frame" x="8" y="8" width="47" height="21"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="47" id="GIW-Ej-Nnc"/>
+                                                        <constraint firstAttribute="height" constant="21" id="S60-3z-q5y"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ch-DM-XGn">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ch-DM-XGn">
                                                     <rect key="frame" x="8" y="37" width="39" height="21"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="39" id="ox4-Wz-BtE"/>
+                                                        <constraint firstAttribute="height" constant="21" id="xfW-05-KCe"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="19.10.2015 11:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7P4-dO-XIM">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19.10.2015 11:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7P4-dO-XIM">
                                                     <rect key="frame" x="63" y="8" width="126" height="21"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="HNt-QE-Dll"/>
+                                                        <constraint firstAttribute="width" constant="126" id="kLo-Xx-38K"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="19.10.2015 12:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJR-cM-2Fj">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19.10.2015 12:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJR-cM-2Fj">
                                                     <rect key="frame" x="63" y="36" width="128" height="21"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="128" id="nvG-w4-AI9"/>
+                                                        <constraint firstAttribute="height" constant="21" id="txS-xJ-ANJ"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstItem="7P4-dO-XIM" firstAttribute="top" secondItem="yeB-3J-XWC" secondAttribute="topMargin" id="225-eM-PHX"/>
+                                                <constraint firstItem="fJR-cM-2Fj" firstAttribute="leading" secondItem="3ch-DM-XGn" secondAttribute="trailing" constant="16" id="3Nt-h5-6bG"/>
+                                                <constraint firstItem="3ch-DM-XGn" firstAttribute="top" secondItem="b8h-Ym-wge" secondAttribute="bottom" constant="8" id="58g-As-CbW"/>
+                                                <constraint firstItem="3ch-DM-XGn" firstAttribute="leading" secondItem="yeB-3J-XWC" secondAttribute="leadingMargin" id="Eha-RK-pMh"/>
+                                                <constraint firstItem="fJR-cM-2Fj" firstAttribute="top" secondItem="7P4-dO-XIM" secondAttribute="bottom" constant="7" id="Y7q-60-phS"/>
+                                                <constraint firstItem="b8h-Ym-wge" firstAttribute="top" secondItem="yeB-3J-XWC" secondAttribute="topMargin" id="gBD-Pr-FYE"/>
+                                                <constraint firstItem="7P4-dO-XIM" firstAttribute="leading" secondItem="b8h-Ym-wge" secondAttribute="trailing" constant="8" id="nbi-gn-bXl"/>
+                                                <constraint firstItem="b8h-Ym-wge" firstAttribute="leading" secondItem="yeB-3J-XWC" secondAttribute="leadingMargin" id="xR9-zc-rtR"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -165,67 +191,111 @@
                                             <outlet property="startLabel" destination="b8h-Ym-wge" id="SNl-tc-a79"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="locationCell" rowHeight="188" id="ehz-Vh-EST" customClass="LocationTableViewCell" customModule="Eventer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="100" width="390" height="188"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="locationCell" rowHeight="209" id="ehz-Vh-EST" customClass="LocationTableViewCell" customModule="Eventer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="98" width="390" height="209"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ehz-Vh-EST" id="lKj-QO-clm">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="187.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="208.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YlI-EW-R2Y">
-                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="129"/>
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YlI-EW-R2Y">
+                                                    <rect key="frame" x="0.0" y="8" width="390" height="129"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="129" id="SUC-Ux-vjD"/>
+                                                    </constraints>
                                                     <connections>
-                                                        <outlet property="delegate" destination="PRi-SS-8fn" id="Lva-nV-QhX"/>
+                                                        <outlet property="delegate" destination="ehz-Vh-EST" id="eFl-6U-61Y"/>
                                                     </connections>
                                                 </mapView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fW9-3h-XZ7" userLabel="Address Label">
-                                                    <rect key="frame" x="8" y="137" width="58" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conference hall" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1W-P8-8O5" userLabel="Address Label">
+                                                    <rect key="frame" x="8" y="145" width="374" height="21"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="2qD-5j-dew"/>
+                                                        <constraint firstAttribute="width" constant="94" id="U3I-Y2-kCF"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="U3I-Y2-kCF"/>
+                                                        </mask>
+                                                    </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Minsk, Belarus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6S-h0-Ezm">
-                                                    <rect key="frame" x="74" y="137" width="316" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minsk, Belarus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6S-h0-Ezm">
+                                                    <rect key="frame" x="8" y="166" width="374" height="21"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="316" id="Gn2-d6-nYS"/>
+                                                        <constraint firstAttribute="height" constant="21" id="OHt-cK-JvE"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="Gn2-d6-nYS"/>
+                                                        </mask>
+                                                    </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Masherova str. 15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQ5-BM-aGe">
-                                                    <rect key="frame" x="74" y="158" width="316" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masherova str. 15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQ5-BM-aGe">
+                                                    <rect key="frame" x="8" y="187" width="374" height="21"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="71A-3k-HMA"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="YlI-EW-R2Y" secondAttribute="trailing" constant="-8" id="LeH-No-6VW"/>
+                                                <constraint firstItem="g6S-h0-Ezm" firstAttribute="top" secondItem="q1W-P8-8O5" secondAttribute="bottom" id="TSF-rB-7xB"/>
+                                                <constraint firstItem="q1W-P8-8O5" firstAttribute="leading" secondItem="lKj-QO-clm" secondAttribute="leadingMargin" id="UaG-4g-7wq"/>
+                                                <constraint firstItem="g6S-h0-Ezm" firstAttribute="leading" secondItem="lKj-QO-clm" secondAttribute="leadingMargin" id="WMw-lt-yIR"/>
+                                                <constraint firstItem="q1W-P8-8O5" firstAttribute="trailing" secondItem="lKj-QO-clm" secondAttribute="trailingMargin" id="cYd-83-nfA"/>
+                                                <constraint firstItem="tQ5-BM-aGe" firstAttribute="top" secondItem="g6S-h0-Ezm" secondAttribute="bottom" id="ic2-u2-Tsi"/>
+                                                <constraint firstItem="q1W-P8-8O5" firstAttribute="top" secondItem="YlI-EW-R2Y" secondAttribute="bottom" constant="8" id="igi-dl-9vt"/>
+                                                <constraint firstItem="tQ5-BM-aGe" firstAttribute="leading" secondItem="lKj-QO-clm" secondAttribute="leadingMargin" id="jrK-0b-N5k"/>
+                                                <constraint firstItem="tQ5-BM-aGe" firstAttribute="trailing" secondItem="lKj-QO-clm" secondAttribute="trailingMargin" id="oMq-an-h9a"/>
+                                                <constraint firstItem="YlI-EW-R2Y" firstAttribute="top" secondItem="lKj-QO-clm" secondAttribute="topMargin" id="rwx-aI-ORU"/>
+                                                <constraint firstItem="YlI-EW-R2Y" firstAttribute="leading" secondItem="lKj-QO-clm" secondAttribute="leadingMargin" constant="-8" id="sBZ-cI-yj9"/>
+                                                <constraint firstItem="g6S-h0-Ezm" firstAttribute="trailing" secondItem="lKj-QO-clm" secondAttribute="trailingMargin" id="zJ2-nh-4oS"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
-                                            <outlet property="addressLabel" destination="fW9-3h-XZ7" id="mgd-M6-lhq"/>
                                             <outlet property="cityCountryLabel" destination="g6S-h0-Ezm" id="mlJ-QC-Es3"/>
                                             <outlet property="eventAddressLabel" destination="tQ5-BM-aGe" id="9e2-JT-MZc"/>
                                             <outlet property="mapView" destination="YlI-EW-R2Y" id="UZM-S0-d9U"/>
+                                            <outlet property="placeLabel" destination="q1W-P8-8O5" id="vwP-i6-17F"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="descriptionCell" rowHeight="96" id="zmn-4T-Zqq" customClass="DescriptionTableViewCell" customModule="Eventer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="288" width="390" height="96"/>
+                                        <rect key="frame" x="0.0" y="307" width="390" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zmn-4T-Zqq" id="bzd-QT-r2o">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="95.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RP8-6M-UWQ">
-                                                    <rect key="frame" x="8" y="8" width="382" height="79.5"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" text="Description" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RP8-6M-UWQ">
+                                                    <rect key="frame" x="8" y="8" width="374" height="79.5"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstItem="RP8-6M-UWQ" firstAttribute="top" secondItem="bzd-QT-r2o" secondAttribute="topMargin" id="3ts-lX-pj9"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="RP8-6M-UWQ" secondAttribute="trailing" id="9X6-sp-s9O"/>
+                                                <constraint firstItem="RP8-6M-UWQ" firstAttribute="bottom" secondItem="bzd-QT-r2o" secondAttribute="bottomMargin" id="JA8-A0-dMV"/>
+                                                <constraint firstItem="RP8-6M-UWQ" firstAttribute="leading" secondItem="bzd-QT-r2o" secondAttribute="leadingMargin" id="ii8-zu-h9X"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
@@ -233,30 +303,44 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ownerCell" rowHeight="42" id="4Ia-Je-lAq" customClass="OwnerTableViewCell" customModule="Eventer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="384" width="390" height="42"/>
+                                        <rect key="frame" x="0.0" y="403" width="390" height="42"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Ia-Je-lAq" id="zbb-cN-eLZ">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="41.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1h-zl-DUY">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1h-zl-DUY">
                                                     <rect key="frame" x="63" y="6" width="319" height="30"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="8iu-dD-alk"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
                                                     <state key="normal" title="Sergey Krivov"/>
                                                     <connections>
                                                         <action selector="ownerButtonTouch:" destination="4Ia-Je-lAq" eventType="touchUpInside" id="Eve-xg-Cvf"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Owner:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNH-Xq-B4e">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Owner:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNH-Xq-B4e">
                                                     <rect key="frame" x="8" y="10" width="47" height="21"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="47" id="ZsN-jZ-zLv"/>
+                                                        <constraint firstAttribute="height" constant="21" id="fow-Rh-Yav"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstItem="DNH-Xq-B4e" firstAttribute="top" secondItem="zbb-cN-eLZ" secondAttribute="topMargin" constant="2" id="A3C-gv-oe5"/>
+                                                <constraint firstItem="p1h-zl-DUY" firstAttribute="trailing" secondItem="zbb-cN-eLZ" secondAttribute="trailingMargin" id="PLX-KD-ian"/>
+                                                <constraint firstItem="DNH-Xq-B4e" firstAttribute="leading" secondItem="zbb-cN-eLZ" secondAttribute="leadingMargin" id="Ykt-fP-K25"/>
+                                                <constraint firstItem="p1h-zl-DUY" firstAttribute="leading" secondItem="DNH-Xq-B4e" secondAttribute="trailing" constant="8" id="ddc-NV-kXZ"/>
+                                                <constraint firstItem="p1h-zl-DUY" firstAttribute="top" secondItem="zbb-cN-eLZ" secondAttribute="topMargin" constant="-2" id="fVU-iD-zeT"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
@@ -264,15 +348,19 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ticketCell" rowHeight="42" id="ltk-wx-Wme" customClass="TicketTableViewCell" customModule="Eventer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="426" width="390" height="42"/>
+                                        <rect key="frame" x="0.0" y="445" width="390" height="42"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ltk-wx-Wme" id="095-tR-xMs">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="41.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0J-vv-Gov">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0J-vv-Gov">
                                                     <rect key="frame" x="148" y="6" width="94" height="30"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="94" id="hfF-88-oL9"/>
+                                                        <constraint firstAttribute="height" constant="30" id="oAv-mS-NHA"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="14"/>
                                                     <state key="normal" title="Buy a ticket"/>
                                                     <connections>
@@ -281,74 +369,128 @@
                                                 </button>
                                             </subviews>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstItem="T0J-vv-Gov" firstAttribute="centerY" secondItem="095-tR-xMs" secondAttribute="centerY" id="1Wj-z7-GDc"/>
+                                                <constraint firstItem="T0J-vv-Gov" firstAttribute="centerX" secondItem="095-tR-xMs" secondAttribute="centerX" id="bcQ-uA-yGB"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="countsCell" rowHeight="132" id="k3s-Ve-Zr7" customClass="CountsTableViewCell" customModule="Eventer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="468" width="390" height="132"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="countsCell" rowHeight="130" id="k3s-Ve-Zr7" customClass="CountsTableViewCell" customModule="Eventer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="487" width="390" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k3s-Ve-Zr7" id="ls5-7Z-BSn">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="131.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="129.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Attending people:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Eg-94-Jnv">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attending people:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Eg-94-Jnv">
                                                     <rect key="frame" x="8" y="10" width="108" height="21"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="gkX-6v-eyd"/>
+                                                        <constraint firstAttribute="width" constant="108" id="h4F-IL-IRo"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmK-fW-q3w">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmK-fW-q3w">
                                                     <rect key="frame" x="142" y="8" width="60" height="21"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="0fG-o3-qPp"/>
+                                                        <constraint firstAttribute="width" constant="60" id="Wkf-Tj-RIk"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Maybe going people:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bj8-fR-UlF">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maybe going people:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bj8-fR-UlF">
                                                     <rect key="frame" x="8" y="39" width="126" height="21"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="DAv-U1-vq1"/>
+                                                        <constraint firstAttribute="width" constant="126" id="cOQ-SS-57h"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wlg-7k-X3N">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wlg-7k-X3N">
                                                     <rect key="frame" x="142" y="39" width="60" height="21"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="Eis-hQ-c3O"/>
+                                                        <constraint firstAttribute="height" constant="21" id="nJF-8z-DYK"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Declined people:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHV-1h-kA8">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Declined people:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHV-1h-kA8">
                                                     <rect key="frame" x="8" y="68" width="108" height="21"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="108" id="Tnp-ol-rjw"/>
+                                                        <constraint firstAttribute="height" constant="21" id="hdB-FA-y61"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5e-8v-3B9">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5e-8v-3B9">
                                                     <rect key="frame" x="142" y="68" width="60" height="21"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="45g-qn-YSl"/>
+                                                        <constraint firstAttribute="height" constant="21" id="gGS-8U-qTf"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Didn't reply people:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1I7-aJ-rmS">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn't reply people:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1I7-aJ-rmS">
                                                     <rect key="frame" x="8" y="97" width="120" height="21"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="Iof-mq-8IT"/>
+                                                        <constraint firstAttribute="height" constant="21" id="TZU-Od-1uj"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dez-I0-nUs">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dez-I0-nUs">
                                                     <rect key="frame" x="142" y="97" width="60" height="21"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="4jd-Hs-XcP"/>
+                                                        <constraint firstAttribute="width" constant="60" id="GhL-ne-J46"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstItem="bj8-fR-UlF" firstAttribute="top" secondItem="8Eg-94-Jnv" secondAttribute="bottom" constant="8" id="2Px-pR-9er"/>
+                                                <constraint firstItem="1I7-aJ-rmS" firstAttribute="top" secondItem="CHV-1h-kA8" secondAttribute="bottom" constant="8" id="8KJ-6a-KmS"/>
+                                                <constraint firstItem="Wlg-7k-X3N" firstAttribute="top" secondItem="GmK-fW-q3w" secondAttribute="bottom" constant="10" id="9YS-Fm-w4Y"/>
+                                                <constraint firstItem="Wlg-7k-X3N" firstAttribute="leading" secondItem="bj8-fR-UlF" secondAttribute="trailing" constant="8" id="ApY-Ya-uDY"/>
+                                                <constraint firstItem="GmK-fW-q3w" firstAttribute="leading" secondItem="8Eg-94-Jnv" secondAttribute="trailing" constant="26" id="E05-7K-gy1"/>
+                                                <constraint firstItem="CHV-1h-kA8" firstAttribute="leading" secondItem="ls5-7Z-BSn" secondAttribute="leadingMargin" id="PAT-9V-Ixn"/>
+                                                <constraint firstItem="bj8-fR-UlF" firstAttribute="leading" secondItem="ls5-7Z-BSn" secondAttribute="leadingMargin" id="Xiw-yj-j6L"/>
+                                                <constraint firstItem="q5e-8v-3B9" firstAttribute="leading" secondItem="CHV-1h-kA8" secondAttribute="trailing" constant="26" id="bap-PO-jJt"/>
+                                                <constraint firstItem="Dez-I0-nUs" firstAttribute="leading" secondItem="1I7-aJ-rmS" secondAttribute="trailing" constant="14" id="h1O-LX-6d7"/>
+                                                <constraint firstItem="CHV-1h-kA8" firstAttribute="top" secondItem="bj8-fR-UlF" secondAttribute="bottom" constant="8" id="jVG-vi-lA0"/>
+                                                <constraint firstItem="8Eg-94-Jnv" firstAttribute="top" secondItem="ls5-7Z-BSn" secondAttribute="topMargin" constant="2" id="lWh-gO-6wq"/>
+                                                <constraint firstItem="GmK-fW-q3w" firstAttribute="top" secondItem="ls5-7Z-BSn" secondAttribute="topMargin" id="r45-xo-2sb"/>
+                                                <constraint firstItem="q5e-8v-3B9" firstAttribute="top" secondItem="Wlg-7k-X3N" secondAttribute="bottom" constant="8" id="tUe-q8-WDD"/>
+                                                <constraint firstItem="Dez-I0-nUs" firstAttribute="top" secondItem="q5e-8v-3B9" secondAttribute="bottom" constant="8" id="v0w-L6-21o"/>
+                                                <constraint firstItem="1I7-aJ-rmS" firstAttribute="leading" secondItem="ls5-7Z-BSn" secondAttribute="leadingMargin" id="vSn-wZ-bJa"/>
+                                                <constraint firstItem="8Eg-94-Jnv" firstAttribute="leading" secondItem="ls5-7Z-BSn" secondAttribute="leadingMargin" id="xal-EJ-QoF"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>

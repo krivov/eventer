@@ -19,8 +19,8 @@ class Event: NSManagedObject, MKAnnotation {
     @NSManaged var city: String?
     @NSManaged var country: String?
     @NSManaged var declined_count: Int16
-    @NSManaged var descr: String
-    @NSManaged var end_time: NSDate
+    @NSManaged var descr: String?
+    @NSManaged var end_time: NSDate?
     @NSManaged var latitude: Double
     @NSManaged var longitude: Double
     @NSManaged var maybe_count: Int16
@@ -28,10 +28,10 @@ class Event: NSManagedObject, MKAnnotation {
     @NSManaged var noreply_count: Int16
     @NSManaged var owner_id: Int64
     @NSManaged var owner_name: String
-    @NSManaged var place: String
+    @NSManaged var place: String?
     @NSManaged var start_time: NSDate?
-    @NSManaged var street: String
-    @NSManaged var ticket_uri: String
+    @NSManaged var street: String?
+    @NSManaged var ticket_uri: String?
     
     @NSManaged var is_favorite: Bool
     @NSManaged var current_search: Bool
