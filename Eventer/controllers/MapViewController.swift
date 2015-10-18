@@ -49,7 +49,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let error: NSErrorPointer = nil
         let fetchRequest = NSFetchRequest(entityName: "Event")
         
-        fetchRequest.predicate = NSPredicate(format: "current_search == %@", true)
+        fetchRequest.predicate = NSPredicate(format: "current_search == %@ AND latitude != 0 AND longitude != 0", true)
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "start_time", ascending: false)]
         
         let results: [AnyObject]?

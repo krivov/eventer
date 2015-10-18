@@ -29,7 +29,7 @@ class LocationTableViewCell: UITableViewCell, MKMapViewDelegate {
         self.mapView.showsUserLocation = true
         
         //if set event location - set center and region map
-        if let latitude = event.latitude as? Double, longitude = event.longitude as? Double {
+        if event.latitude != 0 && event.longitude != 0 {
             
             self.mapView.addAnnotation(event)
             

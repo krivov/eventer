@@ -30,6 +30,10 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //don't show empty cell
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
+        tableView.backgroundColor = UIColor.clearColor()
+        
         //set event image or download and set
         if let image = event.cover?.image {
             eventImage.image = image
@@ -102,12 +106,14 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         }
         
         //set location information
-        if let locationCell = self.tableView.dequeueReusableCellWithIdentifier("locationCell") as? LocationTableViewCell {
-            
-            locationCell.fillCell(event)
-            
-            self.cells.append(locationCell)
-            self.cellHeights.append(185)
+        if event.latitude != 0 && event.longitude != 0 {
+            if let locationCell = self.tableView.dequeueReusableCellWithIdentifier("locationCell") as? LocationTableViewCell {
+                
+                locationCell.fillCell(event)
+                
+                self.cells.append(locationCell)
+                self.cellHeights.append(185)
+            }
         }
         
         //set description information
