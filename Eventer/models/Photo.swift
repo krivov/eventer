@@ -24,7 +24,7 @@ class Photo: NSManagedObject {
             
             // Check to see if there's an error downloading the images for each Pin
             if filePath == "error" {
-                return UIImage(named: "404.jpg")
+                return nil
             }
             
             // Get the file path

@@ -52,9 +52,6 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
             
             CoreDataStackManager.sharedInstance().saveContext()
         })
-        
-        self.searchField.text = "minsk"
-        self.touchSearchButton(self.searchButton)
     }
     
     @IBAction func touchSearchButton(sender: UIButton) {

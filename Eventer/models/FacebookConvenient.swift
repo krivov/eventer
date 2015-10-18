@@ -81,6 +81,41 @@ extension FacebookClient {
 //        })
     }
     
+    func downloadImage(url: String, event: Event, completionHandler: (success: Bool, error: NSError?) -> Void) {
+        
+        taskForGETMethod(url) { (result, error) -> Void in
+            if let error = error {
+                
+                event.cover!.filePath = "error"
+                
+                completionHandler(success: false, error: error)
+            } else {
+                
+                if let result = result {
+                    
+                    if let imageUrl = NSURL(string: url) {
+                        //get file name and file url
+                        let fileName = imageUrl.lastPathComponent
+                        let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
+                        let pathArray = [dirPath, fileName!]
+                        let fileURL = NSURL.fileURLWithPathComponents(pathArray)!
+                        
+                        //save file
+                        NSFileManager.defaultManager().createFileAtPath(fileURL.path!, contents: result, attributes: nil)
+                        
+                        //update the Photo model
+                        event.cover!.filePath = fileURL.path
+                        
+                        completionHandler(success: true, error: nil)
+                    } else {
+                        completionHandler(success: false, error: error)
+                    }
+                }
+            }
+        }
+        
+    }
+    
     // MARK: - Core Data Convenience
     
     var sharedContext: NSManagedObjectContext {

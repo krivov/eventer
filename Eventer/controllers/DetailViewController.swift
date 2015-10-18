@@ -16,93 +16,118 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     
     var event: Event!
     
+    var cells:[UITableViewCell] = []
+    var cellHeights:[CGFloat] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let image = event.cover?.image {
+            eventImage.image = image
+        } else {
+            if let imageUrl = event.cover?.url {
+                //Get image for photo object, and save the context
+                FacebookClient.sharedInstance.downloadImage(imageUrl, event: event, completionHandler: { (success, error) -> Void in
+                    dispatch_async(dispatch_get_main_queue(), {
+                        CoreDataStackManager.sharedInstance().saveContext()
+                        if let image = self.event.cover?.image {
+                            self.eventImage.image = image
+                        }
+                    })
+                })
+            }
+        }
+        
         nameLabel.text = event.name
+        self.setAllCells()
     }
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = false
-        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6;
+        return cells.count;
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let row = indexPath.row
         
-        if row == 0 {
-            if let datesCell = self.tableView.dequeueReusableCellWithIdentifier("datesCell") as? DatesTableViewCell {
-                
-                datesCell.fillCell(event)
-                
-                return datesCell
-            }
-        } else if row == 1 {
-            if let locationCell = self.tableView.dequeueReusableCellWithIdentifier("locationCell") as? LocationTableViewCell {
-                
-                locationCell.fillCell(event)
-                
-                return locationCell
-            }
-        } else if row == 2 {
-            if let descriptionCell = self.tableView.dequeueReusableCellWithIdentifier("descriptionCell") as? DescriptionTableViewCell {
-                
-                descriptionCell.setDescrText(event.descr!)
-                
-                return descriptionCell
-            }
-        } else if row == 3 {
-            if let ownerCell = self.tableView.dequeueReusableCellWithIdentifier("ownerCell") as? OwnerTableViewCell {
-                
-                return ownerCell
-            }
-        } else if row == 4 {
-            if let ticketCell = self.tableView.dequeueReusableCellWithIdentifier("ticketCell") as? TicketTableViewCell {
-                
-                return ticketCell
-            }
-        } else if row == 5 {
-            if let countsCell = self.tableView.dequeueReusableCellWithIdentifier("countsCell") as? CountsTableViewCell {
-                
-                return countsCell
-            }
+        if let cell = self.cells[row] as? UITableViewCell {
+            return cell
+        } else {
+            return UITableViewCell()
         }
-        
-        return UITableViewCell()
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         let row = indexPath.row
         
-        var height: CGFloat = 0
+        if let height = cellHeights[row] as? CGFloat {
+            return height
+        } else {
+            return 0
+        }
+    }
+    
+    func setAllCells() {
         
-        switch row {
-        case 0:
-            height = 70
-        case 1:
-            height = 185
-        case 2:
-            if (event.descr != nil) {
-                if let descriptionCell = self.tableView.dequeueReusableCellWithIdentifier("descriptionCell") as? DescriptionTableViewCell {
-                    
-                    height = descriptionCell.getDescrTextHeight(event.descr!)
-                }
-            } else {
-                height = 0
-            }
-        case 3:
-            height = 42
-        case 4:
-            height = 42
-        case 5:
-            height = 130
-        default: break
+        self.cells = []
+        self.cellHeights = []
+        
+        if let datesCell = self.tableView.dequeueReusableCellWithIdentifier("datesCell") as? DatesTableViewCell {
+            
+            datesCell.fillCell(event)
+            
+            self.cells.append(datesCell)
+            self.cellHeights.append(70)
         }
         
-        return height
+        if let locationCell = self.tableView.dequeueReusableCellWithIdentifier("locationCell") as? LocationTableViewCell {
+            
+            locationCell.fillCell(event)
+            
+            self.cells.append(locationCell)
+            self.cellHeights.append(185)
+        }
+        
+        if (event.descr != nil) {
+            if let descriptionCell = self.tableView.dequeueReusableCellWithIdentifier("descriptionCell") as? DescriptionTableViewCell {
+                
+                descriptionCell.setDescrText(event.descr!)
+                
+                self.cells.append(descriptionCell)
+                self.cellHeights.append(descriptionCell.getDescrTextHeight(event.descr!))
+            }
+        }
+        
+        if let ownerId = event.owner_id as? Int64, ownerName = event.owner_name {
+            if let ownerCell = self.tableView.dequeueReusableCellWithIdentifier("ownerCell") as? OwnerTableViewCell {
+                
+                ownerCell.ownerButton.setTitle(event.owner_name, forState: UIControlState.Normal)
+                ownerCell.ownerId = event.owner_id
+                
+                self.cells.append(ownerCell)
+                self.cellHeights.append(42)
+            }
+        }
+        
+        if let ticketUrl = event.ticket_uri {
+            if let ticketCell = self.tableView.dequeueReusableCellWithIdentifier("ticketCell") as? TicketTableViewCell {
+                
+                ticketCell.ticketUrl = event.ticket_uri
+                
+                self.cells.append(ticketCell)
+                self.cellHeights.append(42)
+            }
+        }
+        
+        if let countsCell = self.tableView.dequeueReusableCellWithIdentifier("countsCell") as? CountsTableViewCell {
+            
+            countsCell.fillCount(event)
+            
+            self.cells.append(countsCell)
+            self.cellHeights.append(130)
+        }
     }
 }

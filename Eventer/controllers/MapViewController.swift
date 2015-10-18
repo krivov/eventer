@@ -30,6 +30,10 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         //load previous map view region properties
         self.loadMapViewRegion()
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

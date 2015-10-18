@@ -238,9 +238,9 @@
 		484D03EB1BBFE256007A9CCC /* Facebook */ = {
 			isa = PBXGroup;
 			children = (
-				484D03E11BBFB466007A9CCC /* FacebookConvenient.swift */,
 				484D03E31BBFB47A007A9CCC /* FacebookClient.swift */,
 				484D03E51BBFB4F3007A9CCC /* FacebookConstants.swift */,
+				484D03E11BBFB466007A9CCC /* FacebookConvenient.swift */,
 			);
 			name = Facebook;
 			sourceTree = "<group>";

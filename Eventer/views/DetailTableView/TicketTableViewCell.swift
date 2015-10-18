@@ -9,8 +9,11 @@
 import UIKit
 
 class TicketTableViewCell: UITableViewCell {
+    
+    var ticketUrl: String?
 
     @IBAction func buyTicketButtonTouch(sender: AnyObject) {
+        
     }
     
 

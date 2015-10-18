@@ -15,19 +15,19 @@ import CoreData
 class Event: NSManagedObject, MKAnnotation {
 
     @NSManaged var id: Int64
-    @NSManaged var attending_count: Int16
+    @NSManaged var attending_count: Int32
     @NSManaged var city: String?
     @NSManaged var country: String?
-    @NSManaged var declined_count: Int16
+    @NSManaged var declined_count: Int32
     @NSManaged var descr: String?
     @NSManaged var end_time: NSDate?
     @NSManaged var latitude: Double
     @NSManaged var longitude: Double
-    @NSManaged var maybe_count: Int16
+    @NSManaged var maybe_count: Int32
     @NSManaged var name: String
-    @NSManaged var noreply_count: Int16
+    @NSManaged var noreply_count: Int32
     @NSManaged var owner_id: Int64
-    @NSManaged var owner_name: String
+    @NSManaged var owner_name: String?
     @NSManaged var place: String?
     @NSManaged var start_time: NSDate?
     @NSManaged var street: String?
@@ -36,7 +36,7 @@ class Event: NSManagedObject, MKAnnotation {
     @NSManaged var is_favorite: Bool
     @NSManaged var current_search: Bool
     
-    @NSManaged var cover: Photo
+    @NSManaged var cover: Photo?
     
     var title: String?
     var subtitle: String?
@@ -70,7 +70,7 @@ class Event: NSManagedObject, MKAnnotation {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZ"
         
         if let attending_count = fbEventArray["attending_count"] as? Int {
-            self.attending_count = Int16(attending_count)
+            self.attending_count = Int32(attending_count)
         }
         
         if let id = fbEventArray["id"] as? String {
@@ -83,7 +83,7 @@ class Event: NSManagedObject, MKAnnotation {
         }
         
         if let declined_count = fbEventArray["declined_count"] as? Int {
-            self.declined_count = Int16(declined_count)
+            self.declined_count = Int32(declined_count)
         }
         
         if let descr = fbEventArray["description"] as? String {
@@ -132,11 +132,11 @@ class Event: NSManagedObject, MKAnnotation {
         }
         
         if let maybe_count = fbEventArray["maybe_count"] as? Int {
-            self.maybe_count = Int16(maybe_count)
+            self.maybe_count = Int32(maybe_count)
         }
         
         if let noreply_count = fbEventArray["noreply_count"] as? Int {
-            self.noreply_count = Int16(noreply_count)
+            self.noreply_count = Int32(noreply_count)
         }
         
         if let ownerDict = fbEventArray["owner"] as? [String: AnyObject] {
