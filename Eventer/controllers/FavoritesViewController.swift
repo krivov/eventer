@@ -25,6 +25,10 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         
         tableView.tableHeaderView?.hidden = true
         
+        //don't show empty cell
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
+        tableView.backgroundColor = UIColor.clearColor()
+        
         //initial fetch
         var error: NSError?
         do {
@@ -99,6 +103,9 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
         let controller = storyboard!.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
         
         controller.event = fetchedResultsController.objectAtIndexPath(indexPath) as! Event

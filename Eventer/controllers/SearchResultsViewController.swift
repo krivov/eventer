@@ -23,6 +23,10 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
         tableView.delegate = self
         tableView.dataSource = self
         
+        //don't show empty cell
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
+        tableView.backgroundColor = UIColor.clearColor()
+        
         //initial fetch
         var error: NSError?
         do {
@@ -97,6 +101,9 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
         let controller = storyboard!.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
         
         controller.event = fetchedResultsController.objectAtIndexPath(indexPath) as! Event

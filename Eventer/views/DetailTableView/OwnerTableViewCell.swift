@@ -16,9 +16,8 @@ class OwnerTableViewCell: UITableViewCell {
     
     @IBAction func ownerButtonTouch(sender: AnyObject) {
         if ownerId != nil {
-            //if let url = NSURL(string: "fb://profile/\(ownerId!)") {
-            if let url = NSURL(string: "http://facebook.com/\(ownerId!)") {
-                UIApplication.sharedApplication().openURL(url)
+            if !UIApplication.sharedApplication().openURL(NSURL(string: "fb://profile/\(ownerId!)")!) {
+                UIApplication.sharedApplication().openURL(NSURL(string: "http://facebook.com/\(ownerId!)")!)
             }
         }
     }
