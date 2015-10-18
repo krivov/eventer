@@ -14,10 +14,16 @@ import CoreData
 class Photo: NSManagedObject {
     //MARK: - Photo model properties
     
+    //image url
     @NSManaged var url: String
+    
+    //image file path (if downloaded)
     @NSManaged var filePath: String?
+    
+    //event
     @NSManaged var event: Event
     
+    //image to show in UIImageView
     var image: UIImage? {
         
         if let filePath = filePath {

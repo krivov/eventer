@@ -11,19 +11,25 @@ import CoreData
 
 class SearchViewController: UIViewController, UITextFieldDelegate {
 
+    //search text field
     @IBOutlet weak var searchField: UITextField!
-    @IBOutlet weak var searchButton: UIButton!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    let applicationDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    //search button
+    @IBOutlet weak var searchButton: UIButton!
+    
+    //activity indicator
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //set search field delegate
         searchField.delegate = self
     }
     
     override func viewWillAppear(animated: Bool) {
+        
+        //get all events from core data which isn't favorite and delete them
         dispatch_async(dispatch_get_main_queue(), {
             let error: NSErrorPointer = nil
             let fetchRequest = NSFetchRequest(entityName: "Event")
@@ -54,7 +60,9 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         })
     }
     
+    //search events
     @IBAction func touchSearchButton(sender: UIButton) {
+        
         startLoading()
         
         FacebookClient.sharedInstance.searchEvents(searchField.text!) { (events, error) -> Void in
@@ -69,23 +77,27 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    //prepare for loading events (disable search field, start active indicator, hide button)
     func startLoading() {
         self.searchButton.hidden = true;
         self.activityIndicator.startAnimating()
         self.searchField.enabled = false
     }
     
+    //prepare for stop loading events (enable search field, stop active indicator, show button)
     func stopLoading() {
         self.searchButton.hidden = false;
         self.activityIndicator.stopAnimating()
         self.searchField.enabled = true
     }
     
+    //search events when touch return button
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         touchSearchButton(searchButton)
         return true
     }
     
+    //enable and disable button when typing text
     @IBAction func changeSearchTextField(sender: UITextField) {
         let countCharacter = searchField.text?.characters.count
         
@@ -99,6 +111,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     //=====================================================================
     //MARK: Core Data
     
+    // CoreData sharedContext
     var sharedContext: NSManagedObjectContext {
         return CoreDataStackManager.sharedInstance().managedObjectContext!
     }

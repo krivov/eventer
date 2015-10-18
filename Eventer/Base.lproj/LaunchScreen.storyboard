@@ -14,11 +14,53 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eventer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyX-sb-wb2">
+                                <rect key="frame" x="85" y="78" width="150" height="115"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="4aD-ua-zxn"/>
+                                    <constraint firstAttribute="height" constant="115" id="apL-tl-V9D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="34"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjZ-iz-hDr">
+                                <rect key="frame" x="90" y="225" width="140" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1BF-vm-y1t"/>
+                                    <constraint firstAttribute="width" constant="140" id="rCB-tZ-K8p"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="find and save interesting events on facebook" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qy-1P-OQa">
+                                <rect key="frame" x="20" y="301" width="280" height="123"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="Pbi-Zt-7Ex"/>
+                                    <constraint firstAttribute="height" constant="123" id="pSW-Qd-SFE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="27"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fjZ-iz-hDr" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="1iM-UJ-TdU"/>
+                            <constraint firstItem="fjZ-iz-hDr" firstAttribute="top" secondItem="lyX-sb-wb2" secondAttribute="bottom" constant="32" id="7rg-ww-SWl"/>
+                            <constraint firstItem="fjZ-iz-hDr" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="REj-wu-EKD"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="8Qy-1P-OQa" secondAttribute="bottom" constant="56" id="XAe-x7-hPo"/>
+                            <constraint firstItem="lyX-sb-wb2" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="pO3-Pj-eGQ"/>
+                            <constraint firstItem="8Qy-1P-OQa" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="qwG-QA-9cM"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

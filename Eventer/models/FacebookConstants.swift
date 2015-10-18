@@ -11,10 +11,12 @@ import Foundation
 
 extension FacebookClient {
     
+    //constants
     struct Constants {
         static let CoondinatesDelta = 0.5
     }
     
+    //request params
     struct JSONRequestParams {
         static let Since = "now"
         static let Until = "next year"
@@ -23,6 +25,7 @@ extension FacebookClient {
         static let Fields = "id,attending_count,declined_count,description,end_time,latitude,longitude,maybe_count,name,noreply_count,owner,place,start_time,ticket_uri,cover"
     }
     
+    //response keys
     struct JSONResponseKeys {
         static let Result = "result"
         static let Message = "message"

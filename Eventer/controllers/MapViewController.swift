@@ -22,7 +22,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         //show the user’s location on the map
         self.mapView.showsUserLocation = true
-        
 
         // Load all pre-saved Pins from CoreData
         self.mapView.addAnnotations(self.fetchSearchEvents())
@@ -32,14 +31,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
+        //hide navigation bar
         self.navigationController?.navigationBarHidden = true
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     // ====================================================================================
     // MARK: - Core Data
@@ -49,7 +43,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         return CoreDataStackManager.sharedInstance().managedObjectContext!
     }
     
-    // fetch all pins from CoreData
+    // fetch all events from CoreData that current search
     func fetchSearchEvents() -> [Event] {
         
         let error: NSErrorPointer = nil
@@ -121,19 +115,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         saveMapViewRegion()
     }
     
-    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
-        
-        // Get the new View Controller
-        //let photoAlbumVC = self.storyboard?.instantiateViewControllerWithIdentifier("PhotoAlbumViewController") as! PhotoAlbumViewController
-        
-        // Pass the pin
-        //photoAlbumVC.pin = view.annotation as! Pin
-        
-        // Then make the segue
-        //self.navigationController?.pushViewController(photoAlbumVC, animated: true)
-        
-    }
     
+    //set view for map annotations
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
 
         //Use dequeued pin annotation view if available, otherwise create a new one
@@ -164,8 +147,10 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         return nil
     }
     
+    //touch to annotation view
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
+        //show detail event controller
         if let event = view.annotation as? Event {
             let controller = storyboard!.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
             

@@ -14,12 +14,12 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var tableView: UITableView!
     
     //Arrays with selected and deleted indexes of table view cells
-    var selectedIndexes   = [NSIndexPath]()
     var deletedIndexPaths : [NSIndexPath]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //configure table view
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -39,25 +39,20 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
             Helper.showAlert(self, title: "Error", message: "Error of displaing events")
         }
         
+        //add button for new search
         let backButton = UIBarButtonItem(title: "New search", style: UIBarButtonItemStyle.Done, target: self, action: "backButton")
         self.navigationItem.leftBarButtonItem = backButton
-
-        // Do any additional setup after loading the view.
     }
     
+    //show new search controller
     func backButton() {
-        print("BACK")
         self.performSegueWithIdentifier("listNewSearch", sender: self)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     //=====================================================================
     //MARK: TableView
     
+    //set number of rows in table
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let sections = self.fetchedResultsController.sections {
             if let sectionInfo = sections[section] as? NSFetchedResultsSectionInfo {
@@ -68,6 +63,7 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
         return 0
     }
     
+    //set table cells
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let event = fetchedResultsController.objectAtIndexPath(indexPath) as! Event
         
@@ -75,6 +71,7 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
         
         let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! EventSearchTableViewCell
         
+        //configure cell fields
         cell.event = event
         cell.setFavoriteButtonImage()
         
@@ -95,8 +92,6 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
             cell.dateLabel.text = dateFormatter.stringFromDate(event.start_time!)
         }
         
-        //cell.dateLabel.text = event.start_time
-        
         return cell
     }
     
@@ -104,36 +99,18 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
+        //show controller with detail event information
         let controller = storyboard!.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
         
         controller.event = fetchedResultsController.objectAtIndexPath(indexPath) as! Event
         
         self.navigationController!.pushViewController(controller, animated: true)
     }
-    
-//    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-//        
-//        switch (editingStyle) {
-//        case .Delete:
-//            let actor = actors[indexPath.row]
-//            
-//            // Remove the actor from the array
-//            actors.removeAtIndex(indexPath.row)
-//            
-//            // Remove the row from the table
-//            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
-//            
-//            // Remove the actor from the context
-//            sharedContext.deleteObject(actor)
-//            CoreDataStackManager.sharedInstance().saveContext()        default:
-//            break
-//        }
-//    }
-    
 
     //=====================================================================
     //MARK: Core Data
     
+    // CoreData sharedContext
     var sharedContext: NSManagedObjectContext {
         return CoreDataStackManager.sharedInstance().managedObjectContext!
     }
@@ -141,7 +118,7 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
     // fetchedResultsController
     lazy var fetchedResultsController: NSFetchedResultsController = {
         
-        //Create fetch request for photos which match the sent Pin.
+        //Create fetch request for events which current search.
         let fetchRequest = NSFetchRequest(entityName: "Event")
         fetchRequest.predicate = NSPredicate(format: "current_search == %@", true)
         
@@ -157,52 +134,5 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
         
         return fetchedResultsController
         }()
-    
-    func controllerWillChangeContent(controller: NSFetchedResultsController) {
-        //Set indexes for changed content from Core Data
-        deletedIndexPaths  = [NSIndexPath]()
-    }
-    
-    func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
-        //add indexPath to appropriate array with type of change
-        switch type {
-        case .Insert:
-            print("INSERT")
-        case .Delete:
-            deletedIndexPaths.append(indexPath!)
-        case .Update:
-            print("UPDATE")
-        default:
-            break
-        }
-    }
-    
-    func controllerDidChangeContent(controller: NSFetchedResultsController) {
-        
-        //Check to make sure UI elements are correctly displayed.
-        //if controller.fetchedObjects?.count > 0 {
-        //    newCollectionButton.enabled = true
-        //}
-        
-        //Make the relevant updates to the collectionView once Core Data has finished its changes.
-        
-        
-        
-//        collectionView.performBatchUpdates({
-//            
-//            //for indexPath in self.insertedIndexPaths {
-//            //    self.collectionView.insertItemsAtIndexPaths([indexPath])
-//            //}
-//            
-//            for indexPath in self.deletedIndexPaths {
-//                self.collectionView.deleteItemsAtIndexPaths([indexPath])
-//            }
-//            
-//            //for indexPath in self.updatedIndexPaths {
-//            //    self.collectionView.reloadItemsAtIndexPaths([indexPath])
-//            //}
-//            
-//            }, completion: nil)
-    }
 
 }

@@ -10,8 +10,10 @@ import UIKit
 
 class DescriptionTableViewCell: UITableViewCell {
     
+    //description text
     @IBOutlet weak var descriptionText: UITextView!
     
+    //set description text and update frame height
     func setDescrText(text: String) {
         self.descriptionText.text = text
         
@@ -21,6 +23,7 @@ class DescriptionTableViewCell: UITableViewCell {
         descriptionText.frame = frame
     }
     
+    //get frame height by text
     func getDescrTextHeight(text: String) -> CGFloat {
         self.descriptionText.text = text
         
@@ -32,8 +35,6 @@ class DescriptionTableViewCell: UITableViewCell {
         descriptionText.frame = newFrame;
         
         return newFrame.size.height + 8.0
-        
-        //return descriptionText.contentSize.height + 18.0
     }
     
 }

@@ -14,30 +14,70 @@ import CoreData
 
 class Event: NSManagedObject, MKAnnotation {
 
+    //event facebook id
     @NSManaged var id: Int64
+    
+    //Number of people attending the event
     @NSManaged var attending_count: Int32
+    
+    //Event location city
     @NSManaged var city: String?
+    
+    //Event location country
     @NSManaged var country: String?
+    
+    //Number of people who declined the event
     @NSManaged var declined_count: Int32
+    
+    //Event description
     @NSManaged var descr: String?
+    
+    //End time, if one has been set
     @NSManaged var end_time: NSDate?
+    
+    //Event location latitude
     @NSManaged var latitude: Double
+    
+    //Event location longitude
     @NSManaged var longitude: Double
+    
+    //Number of people who maybe going to the event
     @NSManaged var maybe_count: Int32
+    
+    //Event name
     @NSManaged var name: String
+    
+    //Number of people who did not reply to the event
     @NSManaged var noreply_count: Int32
+    
+    //The profile id that created the event
     @NSManaged var owner_id: Int64
+    
+    //The profile name that created the event
     @NSManaged var owner_name: String?
+    
+    //Event Place
     @NSManaged var place: String?
+    
+    //Start time
     @NSManaged var start_time: NSDate?
+    
+    //Event location street
     @NSManaged var street: String?
+    
+    //The link users can visit to buy a ticket to this event
     @NSManaged var ticket_uri: String?
     
+    //is event save to favorite
     @NSManaged var is_favorite: Bool
+    
+    //is event in currebt search
     @NSManaged var current_search: Bool
     
+    //Cover picture
     @NSManaged var cover: Photo?
     
+    //variables for map annotation
     var title: String?
     var subtitle: String?
     
@@ -60,6 +100,7 @@ class Event: NSManagedObject, MKAnnotation {
         super.init(entity: entity, insertIntoManagedObjectContext: context)
     }
     
+    //init event object from dictionary
     init(fbEventArray: [String: AnyObject], context: NSManagedObjectContext) {
         
         // Entity of core data

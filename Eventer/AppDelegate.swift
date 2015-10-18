@@ -13,16 +13,13 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-    var events: [Event] = [Event]()
-
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         //init facebook SDK - for the proper use of the Facebook SDK
         let fbAppLauch = FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
-        //set controller identifier if we dont login or login
+        //set controller identifier if we don't login or login
         var controllerIdentifier = "loginController"
         if ((FBSDKAccessToken.currentAccessToken()) != nil) {
             controllerIdentifier = "searchTabBar"

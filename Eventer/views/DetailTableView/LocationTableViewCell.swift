@@ -11,12 +11,15 @@ import MapKit
 
 class LocationTableViewCell: UITableViewCell, MKMapViewDelegate {
 
+    //map view
     @IBOutlet weak var mapView: MKMapView!
     
+    //labels
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var cityCountryLabel: UILabel!
     @IBOutlet weak var eventAddressLabel: UILabel!
     
+    //fill cell with event data
     func fillCell(event: Event) {
         
         //set mapView delegate
@@ -25,6 +28,7 @@ class LocationTableViewCell: UITableViewCell, MKMapViewDelegate {
         //show the user’s location on the map
         self.mapView.showsUserLocation = true
         
+        //if set event location - set center and region map
         if let latitude = event.latitude as? Double, longitude = event.longitude as? Double {
             
             self.mapView.addAnnotation(event)
@@ -36,8 +40,10 @@ class LocationTableViewCell: UITableViewCell, MKMapViewDelegate {
             mapView.region = region
         }
         
+        //set place name
         placeLabel.text = event.place
         
+        //set city and country name
         var cityCountry = event.city
         
         if (event.country != nil) {
@@ -50,6 +56,7 @@ class LocationTableViewCell: UITableViewCell, MKMapViewDelegate {
         
         cityCountryLabel.text = cityCountry
         
+        //set address
         eventAddressLabel.text = event.street
     }
 

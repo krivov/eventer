@@ -10,14 +10,21 @@ import UIKit
 
 class EventSearchTableViewCell: UITableViewCell {
 
+    //event object
     var event: Event!
     
+    //labels
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
+    
+    //event image
     @IBOutlet weak var locationImage: UIImageView!
+    
+    //add to favorite button
     @IBOutlet weak var favoriteButton: UIButton!
     
+    //add to favorite
     @IBAction func addToFavorite(sender: UIButton) {
         if(self.event.is_favorite) {
             event.is_favorite = false
@@ -26,6 +33,7 @@ class EventSearchTableViewCell: UITableViewCell {
             event.current_search = false
         }
         
+        //set favorite button image
         setFavoriteButtonImage()
         
         dispatch_async(dispatch_get_main_queue(), {
@@ -33,6 +41,7 @@ class EventSearchTableViewCell: UITableViewCell {
         })
     }
     
+    //set favorite buuton (if event is favorite or not)
     func setFavoriteButtonImage() {
         var imageName = ""
         
@@ -44,16 +53,4 @@ class EventSearchTableViewCell: UITableViewCell {
         
         favoriteButton.setImage(UIImage(named: imageName), forState: UIControlState.Normal)
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

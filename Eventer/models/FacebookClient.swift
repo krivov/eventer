@@ -20,6 +20,7 @@ class FacebookClient: NSObject {
         super.init()
     }
     
+    //task for download via get method
     func taskForGETMethod(urlString: String,
         completionHandler: (result: NSData?, error: NSError?) -> Void) {
             
@@ -43,6 +44,7 @@ class FacebookClient: NSObject {
             task.resume()
     }
     
+    //task for search events in facebook
     func fbGraphSearchEvents(text: String, completionHandler: (result: [[String:AnyObject]]?, error: NSError?) -> Void) {
         
         let parameters = [
@@ -59,11 +61,6 @@ class FacebookClient: NSObject {
             if let error = downloadError {
                 completionHandler(result: nil, error: error)
             } else {
-                //print(result)
-                //let json = JSON(data: result)
-                //if let userName = json[0]["user"]["name"].string {
-                    //Now you got your value
-                //}
                 
                 if let data = result["data"] as? [[String:AnyObject]] {
                     completionHandler(result: data, error: nil)

@@ -13,13 +13,13 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
 
     @IBOutlet weak var tableView: UITableView!
     
-    //Arrays with selected and deleted indexes of table view cells
-    var selectedIndexes   = [NSIndexPath]()
+    //Arrays with deleted indexes of table view cells
     var deletedIndexPaths : [NSIndexPath]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //configure table view
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -45,14 +45,17 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        //hide navigation bar
         self.navigationController?.navigationBarHidden = true
         
+        //reload table data
         tableView.reloadData()
     }
 
     //=====================================================================
     //MARK: TableView
     
+    //set number of rows in table
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let sections = self.fetchedResultsController.sections {
             if let sectionInfo = sections[section] as? NSFetchedResultsSectionInfo {
@@ -63,6 +66,7 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         return 0
     }
     
+    //set number of sections in table
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         if let sections = self.fetchedResultsController.sections {
             return sections.count
@@ -71,6 +75,7 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         return 0
     }
     
+    //set table cells
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let event = fetchedResultsController.objectAtIndexPath(indexPath) as! Event
         
@@ -78,6 +83,7 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         
         let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! EventSearchTableViewCell
         
+        //configure cell fields
         cell.event = event
         
         cell.nameLabel.text = event.name
@@ -97,15 +103,15 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
             cell.dateLabel.text = dateFormatter.stringFromDate(event.start_time!)
         }
         
-        //cell.dateLabel.text = event.start_time
-        
         return cell
     }
     
+    //select row in table
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
+        //show controller with detail event information
         let controller = storyboard!.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
         
         controller.event = fetchedResultsController.objectAtIndexPath(indexPath) as! Event
@@ -113,18 +119,12 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         self.navigationController!.pushViewController(controller, animated: true)
     }
     
+    //edit row in table
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         switch (editingStyle) {
+        //delete row
         case .Delete:
-            //tableView.beginUpdates()
-            //tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
-            //tableView.endUpdates()
             let event = fetchedResultsController.objectAtIndexPath(indexPath) as! Event
-            
-            // Remove the row from the table
-            //tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
-            
-            // Remove the actor from the array
             self.sharedContext.deleteObject(event)
             
             dispatch_async(dispatch_get_main_queue(), {
@@ -139,6 +139,7 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     //=====================================================================
     //MARK: Core Data
     
+    // CoreData sharedContext
     var sharedContext: NSManagedObjectContext {
         return CoreDataStackManager.sharedInstance().managedObjectContext!
     }
@@ -146,10 +147,11 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     // fetchedResultsController
     lazy var fetchedResultsController: NSFetchedResultsController = {
         
-        //Create fetch request for photos which match the sent Pin.
+        //Create fetch request for events which favorite.
         let fetchRequest = NSFetchRequest(entityName: "Event")
         fetchRequest.predicate = NSPredicate(format: "is_favorite == %@", true)
         
+        //sort events by start time
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "start_time", ascending: false)]
         
         //Create fetched results controller with the new fetch request.
@@ -170,6 +172,7 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.beginUpdates()
     }
     
+    //if change table
     func controller(controller: NSFetchedResultsController!, didChangeSection sectionInfo: NSFetchedResultsSectionInfo!, atIndex sectionIndex: Int, forChangeType type: NSFetchedResultsChangeType) {
         switch type {
         case .Insert:
@@ -185,47 +188,17 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         //add indexPath to appropriate array with type of change
         switch type {
         case .Insert:
-            print("INSERT")
             tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Fade)
         case .Delete:
             tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
             deletedIndexPaths.append(indexPath!)
-        case .Update:
-            print("UPDATE")
         default:
             break
         }
     }
     
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
-        
-        //Check to make sure UI elements are correctly displayed.
-        if controller.fetchedObjects?.count > 0 {
-            //TODO: enable edit button
-        }
-        
-        print("controllerDidChangeContent")
         tableView.endUpdates()
-        
-        //Make the relevant updates to the collectionView once Core Data has finished its changes.
-        
-        
-        
-        //        collectionView.performBatchUpdates({
-        //
-        //            //for indexPath in self.insertedIndexPaths {
-        //            //    self.collectionView.insertItemsAtIndexPaths([indexPath])
-        //            //}
-        //
-        //            for indexPath in self.deletedIndexPaths {
-        //                self.collectionView.deleteItemsAtIndexPaths([indexPath])
-        //            }
-        //
-        //            //for indexPath in self.updatedIndexPaths {
-        //            //    self.collectionView.reloadItemsAtIndexPaths([indexPath])
-        //            //}
-        //            
-        //            }, completion: nil)
     }
 
 }

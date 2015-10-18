@@ -10,8 +10,10 @@ import UIKit
 
 class TicketTableViewCell: UITableViewCell {
     
+    //event buy ticket url
     var ticketUrl: String?
 
+    //open ticket url in browser
     @IBAction func buyTicketButtonTouch(sender: AnyObject) {
         if ticketUrl != nil {
             if let url = NSURL(string: ticketUrl!) {

@@ -9,6 +9,8 @@
 import UIKit
 
 class Helper {
+    
+    //show alert
     static func showAlert(controller: UIViewController, title: String, message: String) {
         
         let alert = UIAlertController(
@@ -29,4 +31,5 @@ class Helper {
         )
         
         controller.presentViewController(alert, animated: true, completion: nil)
-    }}
+    }
+}
